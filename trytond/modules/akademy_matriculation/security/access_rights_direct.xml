@@ -2,82 +2,71 @@
 <!-- This file is part of SAGE Education.   The COPYRIGHT file at the top level of
 this repository contains the full copyright notices and license terms. -->
 
-<!-- GROUP OF PERMISSIONS FOR DIRECTION USERS -->
+<!-- Group of Permissions for Direction users -->
 <tryton>
-    <data>        
-        <!-- Access to the REGISTRATION menu -->
+    <data>
         <record model="ir.ui.menu-res.group" 
             id="menu_registrations-group_akademy_direc">
             <field name="menu" ref="akademy_registrations"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the CANDIDATES menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_candidates-group_akademy_direc">
             <field name="menu" ref="akademy_candidates"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the CANDIDATES APPLICATIONS menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_candidate_applications-group_akademy_direc">
             <field name="menu" ref="akademy_candidate_applications"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the APPLICATIONS RESULT menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_applications_result-group_akademy_direc">
             <field name="menu" ref="akademy_applications_result"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the STUDENT TRANSFER menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_student_transfer-group_akademy_direc">
             <field name="menu" ref="akademy_student_transfer"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the MATRICULATION STUDENT menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_matriculation_student-group_akademy_direc">
             <field name="menu" ref="akademy_matriculation_student"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the ASSOCIATION DISCIPLINE menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_associationdiscipline_wiz-group_akademy_direc">
             <field name="menu" ref="akademy_associationdiscipline_wiz"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
         
-        <!-- Access to the REGISTRATION menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_application_avaliation_wiz-group_akademy_direc">
             <field name="menu" ref="akademy_application_avaliation_wiz"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>  
 
-        <!-- Defining Rules for Enrollment Access Models -->
-        <!-- start candidates -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_candidates-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.candidates')]"/>
+            <field name="model">akademy_matriculation.candidates</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_candidates-group_akademy_direc">
-            <field name="name">Candidatos</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.candidates')]"/>
+            <field name="name">Candidates</field>
+            <field name="model">akademy_matriculation.candidates</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -91,22 +80,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start applications -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_applications-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.applications')]"/>
+            <field name="model">akademy_matriculation.applications</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_applications-group_akademy_direc">
-            <field name="name">Aplicações</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.applications')]"/>
+            <field name="name">Applications</field>
+            <field name="model">akademy_matriculation.applications</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -120,22 +107,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start applications-result -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_applications_result-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.applications.result')]"/>
+            <field name="model">akademy_matriculation.applications.result</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_applications_result-group_akademy_direc">
-            <field name="name">Resultados</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.applications.result')]"/>
+            <field name="name">Results</field>
+            <field name="model">akademy_matriculation.applications.result</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -149,22 +134,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start student-transfer -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_student_transfer-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.student.transfer')]"/>
+            <field name="model">akademy_matriculation.student.transfer</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_student_transfer-group_akademy_direc">
-            <field name="name">Transferências</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.student.transfer')]"/>
+            <field name="name">Transfers</field>
+            <field name="model">akademy_matriculation.student.transfer</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -178,22 +161,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start student_transfer-discipline -->
         <record model="ir.model.access" 
-            id="access_akademy_matriculation_student_transfer_discipline-group_akademy_direc">                
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.student.transfer.discipline')]"/>
+            id="access_akademy_matriculation_student_transfer_discipline-group_akademy_direc">
+            <field name="model">akademy_matriculation.student.transfer.discipline</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_student_transfer_discipline-group_akademy_direc">
-            <field name="name">Transferências disciplinas</field>
-            <field name="model" search="[('model', '=', 'akademy_matriculation.student.transfer.discipline')]"/>
+            <field name="name">Transfer disciplines</field>
+            <field name="model">akademy_matriculation.student.transfer.discipline</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -207,22 +188,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start Wiz Matriculation Start -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_wizard-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.wizmatriculation.create.start')]"/>
+            <field name="model">akademy_matriculation.wizmatriculation.create.start</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_wizard-group_akademy_direc">
-            <field name="name">Matricular Wiz</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.wizmatriculation.create.start')]"/>
+            <field name="name">Enroll wiz</field>
+            <field name="model">akademy_matriculation.wizmatriculation.create.start</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -236,22 +215,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
         
-        <!-- start Wiz Association Discipline Start -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_wizassociatiodiscipline_wizard-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.wizassociatiodiscipline.create.start')]"/>
+            <field name="model">akademy_matriculation.wizassociatiodiscipline.create.start</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_wizassociatiodiscipline_wizard-group_akademy_direc">
-            <field name="name">Associar Disciplinas Wiz</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.wizassociatiodiscipline.create.start')]"/>
+            <field name="name">Associate discipline wiz</field>
+            <field name="model">akademy_matriculation.wizassociatiodiscipline.create.start</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -265,22 +242,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
         
-        <!-- start Wiz Application Avaliation Start -->
         <record model="ir.model.access" 
             id="access_akademy_matriculation_wizapplication_avaliation_wizard-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_matriculation.wizapplication_avaliation.create.start')]"/>
+            <field name="model">akademy_matriculation.wizapplication_avaliation.create.start</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_matriculation_wizapplication_avaliation_wizard-group_akademy_direc">
-            <field name="name">Associar Disciplinas Wiz</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_matriculation.wizapplication_avaliation.create.start')]"/>
+            <field name="name">Evaluate application wiz</field>
+            <field name="model">akademy_matriculation.wizapplication_avaliation.create.start</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -294,30 +269,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Access to the SETTINGS menu -->
         <record model="ir.ui.menu-res.group" 
             id="menu_matriculation_reference-group_akademy_direc">
             <field name="menu" ref="akademy_matriculation_reference"/>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- Defining Rules for Access Model Settings -->
-        <!-- start Matriculation Reference -->
         <record model="ir.model.access" 
             id="access_akademy_configuration_matriculation_reference-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_configuration.matriculation.reference')]"/>
+            <field name="model">akademy_configuration.matriculation.reference</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_configuration_matriculation_reference-group_akademy_direc">
-            <field name="name">Referência da Matrícula</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_configuration.matriculation.reference')]"/>
+            <field name="name">Matriculation reference</field>
+            <field name="model">akademy_configuration.matriculation.reference</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -331,22 +302,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
 
-        <!-- start Application Phase -->
         <record model="ir.model.access" 
             id="access_akademy_configuration_phase-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_configuration.phase')]"/>
+            <field name="model">akademy_configuration.phase</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_configuration_phase-group_akademy_direc">
-            <field name="name">Fase da Candidatura</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_configuration.phase')]"/>
+            <field name="name">Application phase</field>
+            <field name="model">akademy_configuration.phase</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>
@@ -360,22 +329,20 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="akademy_party.group_akademy_direc"/>
         </record>
         
-        <!-- start Application Criteria -->
         <record model="ir.model.access" 
             id="access_akademy_configuration_application_criteria-group_akademy_direc">
-            <field name="model" search="[('model', '=', 'akademy_configuration.application.criteria')]"/>
+            <field name="model">akademy_configuration.application.criteria</field>
             <field name="group" ref="akademy_party.group_akademy_direc"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <!-- access rule group -->
+        
         <record model="ir.rule.group" 
             id="rule_group_akademy_configuration_application_criteria-group_akademy_direc">
-            <field name="name">Critério de Admissão</field>
-            <field name="model" 
-                search="[('model', '=', 'akademy_configuration.application.criteria')]"/>
+            <field name="name">Application criteria</field>
+            <field name="model">akademy_configuration.application.criteria</field>
             <field name="global_p" eval="False"/>
             <field name="default_p" eval="False"/>
             <field name="perm_read" eval="True"/>

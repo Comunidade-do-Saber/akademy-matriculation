@@ -1,6 +1,5 @@
 # This file is part of SAGE Education.   The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-
 from trytond.pool import Pool
 from trytond.report import Report
 from datetime import date
@@ -114,13 +113,18 @@ class EquivalenceDisciplineReport(Report):
 							for studyplan_discipline in studyplan.studyplan_discipline:
 								if studyplan_discipline not in discipline_exit:
 									discipline_exit.append(studyplan_discipline)
-									get_studyplan_discipline.append([studyplan_discipline.discipline.name, studyplan.classe.classe.name, 0])								
+									get_studyplan_discipline.append([
+										studyplan_discipline.discipline.name, 
+										studyplan.classe.classe.name, 0])								
 				
 				if len(student.student_transfer_discipline) > 0:
 					for student_transfer_discipline in student.student_transfer_discipline:											
 						if student_transfer_discipline not in discipline_exit:
 							discipline_exit.append(student_transfer_discipline)
-							get_student_discipline.append([student_transfer_discipline.discipline.name, student_transfer_discipline.course_classe.classe.name, student_transfer_discipline.average])
+							get_student_discipline.append([
+								student_transfer_discipline.discipline.name, 
+								student_transfer_discipline.course_classe.classe.name, 
+								student_transfer_discipline.average])
 			
 				get_student_equivalence.append(student)
 		
@@ -131,7 +135,8 @@ class EquivalenceDisciplineReport(Report):
 			return context
 						
 		else:
-			student_external = EquivalenceDisciplineReport.student_external_equivalence(get_student_equivalence, get_student_discipline, get_studyplan_discipline)
+			student_external = EquivalenceDisciplineReport.student_external_equivalence(
+				get_student_equivalence, get_student_discipline, get_studyplan_discipline)
 			
 			context['students'] = student_external[0]
 			context['discipline'] = student_external[1]
@@ -169,4 +174,3 @@ class EquivalenceDisciplineReport(Report):
 							discipline.append(student_discipline)
 		
 		return [student, discipline]
-

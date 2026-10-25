@@ -16,21 +16,21 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="name">matriculation_reference_list</field>
                 </record>
                 <record model="ir.action.act_window" id="act_matriculation_reference">
-                        <field name="name">Referência da matrícula</field>
+                        <field name="name">Matriculation Reference</field>
                         <field name="res_model">akademy_configuration.matriculation.reference</field>
                 </record>
                 <record model="ir.action.act_window.view" id="act_matriculation_reference_view_form">
-                        <field name="sequence" eval="4"/>
+                        <field name="sequence" eval="62"/>
                         <field name="view" ref="matriculation_reference_view_form"/>
                         <field name="act_window" ref="act_matriculation_reference"/>
                 </record>
                 <record model="ir.action.act_window.view" id="act_matriculation_reference_view_list">
-                        <field name="sequence" eval="3"/>
+                        <field name="sequence" eval="61"/>
                         <field name="view" ref="matriculation_reference_view_list"/>
                         <field name="act_window" ref="act_matriculation_reference"/>
                 </record>
-                <menuitem name="Referência da matrícula" parent="akademy_classe.akademy_config_pre" id="akademy_matriculation_reference" 
-                        sequence="2" action="act_matriculation_reference"/>  
+                <menuitem name="Matriculation Reference" parent="akademy_classe.akademy_config" id="akademy_matriculation_reference" 
+                        sequence="60" action="act_matriculation_reference"/>  
                 
                 <!-- start lective_year -->
                 <record model="ir.ui.view" id="lective_year_view_form">

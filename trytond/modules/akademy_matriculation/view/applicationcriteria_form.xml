@@ -30,7 +30,7 @@ this repository contains the full copyright notices and license terms. -->
         <field name="age"/>
     </group>  
     <notebook colspan="4">
-        <page string="Descrição" id="description">
+        <page string="Description" id="description">
             <field name="description" widget="richtext"/>
         </page>
     </notebook> 

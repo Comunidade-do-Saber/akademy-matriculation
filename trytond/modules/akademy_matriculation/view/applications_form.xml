@@ -22,10 +22,10 @@ this repository contains the full copyright notices and license terms. -->
         <field name="reference"/>         
     </group>    
     <notebook colspan="4">
-        <page string="Descrição" id="description">
+        <page string="Description" id="description">
             <field name="description" widget="richtext"/>
         </page>
-        <page string="Resultados" id="application_result">
+        <page string="Results" id="application_result">
             <field name="result" mode="tree" colspan="4"
                 view_ids="akademy_matriculation.applications_result_view_tree"/>
         </page>

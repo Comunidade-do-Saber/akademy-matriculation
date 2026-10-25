@@ -16,7 +16,7 @@ this repository contains the full copyright notices and license terms. -->
         <field name="end"/>
     </group>
     <notebook colspan="4">
-        <page string="Critérios" id="application_criteria">
+        <page string="Criteria" id="application_criteria">
             <field name="application_criteria" mode="tree,from" colspan="4"
                 view_ids="akademy_matriculation.applicationcriteria_view_list,akademy_matriculation.applicationcriteria_view_form"/>
         </page>

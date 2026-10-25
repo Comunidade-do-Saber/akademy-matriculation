@@ -10,7 +10,7 @@ this repository contains the full copyright notices and license terms. -->
     <field name="area"/>
     <field name="course"/>
     <field name="average">
-        <suffix name="average" string="Valores"/>
+        <suffix name="average" string="Average"/>
     </field>
     <field name="date_start"/>
     <field name="date_end"/>

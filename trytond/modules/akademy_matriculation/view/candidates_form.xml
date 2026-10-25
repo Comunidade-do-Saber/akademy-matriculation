@@ -26,7 +26,7 @@ this repository contains the full copyright notices and license terms. -->
         <field name="average"/>
     </group>
     <notebook colspan="4">
-        <page string="Candidaturas" id="applications_candidate">
+        <page string="Applications" id="applications_candidate">
             <field name="applications" mode="tree,form" colspan="4"
                 view_ids="akademy_matriculation.candidate_applications_view_tree,akademy_matriculation.candidate_applications_view_form"/>
         </page>

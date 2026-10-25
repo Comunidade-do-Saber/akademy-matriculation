@@ -1,7 +1,22 @@
 # Changelog
 All changes made in **akademy-matriculation** project will be listed in this file.
 
-The format as follows the recomendations of [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/). And Semantic Versioning
+The format as follows the recomendations of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). And Semantic Versioning
+
+
+## [8.0.0] - 2026-10-25
+### Changed
+- Update to Tryton version 8.0
+
+### Added
+- Copyright
+- Project guidelines
+
+
+## [7.0.1] - 2026-06-01
+### Changed
+- Translated Source Code from Portuguese to English
+- Report fields
 
 
 ## [7.0.0] - 2026-04-11
@@ -57,4 +72,3 @@ The format as follows the recomendations of [Keep a Changelog](https://keepachan
 ## [1.0.1] - 2025-12-29
 ### Changed
 - Update reports
-

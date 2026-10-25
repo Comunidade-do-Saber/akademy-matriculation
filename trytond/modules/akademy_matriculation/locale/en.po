@@ -2,692 +2,663 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "model:akademy_matriculation.candidates,name:"
-msgid "Candidates"
-msgstr "Candidates"
-
-msgctxt "model:akademy_matriculation.applications,name:"
-msgid "Applications"
-msgstr "Applications"
-
-msgctxt "model:akademy_matriculation.applications.result,name:"
-msgid "Applications Result"
-msgstr "Applications Result"
-
-msgctxt "model:akademy_matriculation.student.transfer,name:"
-msgid "Student - Transfer"
-msgstr "Student Transfer"
-
-msgctxt "model:akademy_matriculation.student.transfer.discipline,name:"
-msgid "Student Tranfer Discipline"
-msgstr "Tranfer Discipline"
-
-msgctxt "model:akademy_matriculation.wizmatriculation.create.start,name:"
-msgid "Matriculation CreateStart"
-msgstr "Matriculation"
-
-msgctxt "model:akademy_matriculation.wizassociatiodiscipline.create.start,name:"
-msgid "AssociationDiscipline CreateStart"
-msgstr "Association Discipline"
-
-msgctxt "model:akademy_matriculation.wizapplication_avaliation.create.start,name:"
-msgid "ApplicationAvaliation CreateStart"
-msgstr "Application Avaliation"
-
-msgctxt "model:akademy_configuration.matriculation.reference,name:"
-msgid "Matriculation Reference"
-msgstr "Matriculation Reference"
-
-msgctxt "model:akademy_configuration.phase,name:"
-msgid "Phase"
-msgstr "Phase"
-
-msgctxt "model:akademy_configuration.application.criteria,name:"
-msgid "Application Criteria"
-msgstr "Application Criteria"
-
-msgctxt "model:ir.ui.menu,name:akademy_registrations"
-msgid "Matrículas"
-msgstr "Matriculation"
-
-msgctxt "model:ir.ui.menu,name:akademy_candidates"
-msgid "Candidatos"
-msgstr "Candidates"
-
-msgctxt "model:ir.ui.menu,name:akademy_candidate_applications"
-msgid "Candidaturas"
-msgstr "Applications"
-
-msgctxt "model:ir.ui.menu,name:akademy_applications_result"
-msgid "Resultados"
-msgstr "Result"
-
-msgctxt "model:ir.ui.menu,name:akademy_student_transfer"
-msgid "Transferências"
-msgstr "Transfers"
-
-msgctxt "model:ir.ui.menu,name:akademy_matriculation_student"
-msgid "Matrícular"
-msgstr "Matriculation"
-
-msgctxt "model:ir.ui.menu,name:akademy_associationdiscipline_wiz"
-msgid "Associar disciplina"
-msgstr "Association discipline"
-
-msgctxt "model:ir.ui.menu,name:akademy_application_avaliation_wiz"
-msgid "Avaliar candidatura"
-msgstr "Evaluate application"
-
-msgctxt "model:ir.ui.menu,name:akademy_matriculation_reference"
-msgid "Referência da matrícula"
-msgstr "Matriculation Reference"
-
-msgctxt "field:party.party,candidates:"
-msgid "Candidato"
-msgstr "Candidate"
-
-msgctxt "field:akademy_matriculation.candidates,candidates:"
-msgid "Candidato"
-msgstr "Candidate"
-
-msgctxt "field:akademy_matriculation.candidates,code:"
-msgid "Código"
-msgstr "Code"
-
-msgctxt "field:akademy_matriculation.candidates,date_start:"
-msgid "Data de início"
-msgstr "Start date"
-
-msgctxt "field:akademy_matriculation.candidates,date_end:"
-msgid "Data de conclusão"
-msgstr "End date"
-
-msgctxt "field:akademy_matriculation.candidates,average:"
-msgid "Média"
-msgstr "Average"
-
-msgctxt "field:akademy_matriculation.candidates,party:"
-msgid "Nome"
-msgstr "Party"
-
-msgctxt "field:akademy_matriculation.candidates,institution:"
-msgid "Instituição"
-msgstr "Institution"
-
-msgctxt "field:akademy_matriculation.candidates,area:"
-msgid "Área"
-msgstr "Area"
-
-msgctxt "field:akademy_matriculation.candidates,course:"
-msgid "Curso"
-msgstr "Course"
-
-msgctxt "field:akademy_matriculation.candidates,academic_level:"
-msgid "Nível acadêmico"
-msgstr "Academic level"
-
-msgctxt "field:akademy_matriculation.candidates,applications:"
-msgid "Candidaturas"
-msgstr "Applications"
-
-msgctxt "field:akademy_matriculation.applications,state:"
-msgid "Avaliado"
-msgstr "Avaliated"
-
-msgctxt "field:akademy_matriculation.applications,description:"
-msgid "Descrição"
-msgstr "Description"
-
-msgctxt "field:akademy_matriculation.applications,reference:"
-msgid "Modalidade"
-msgstr "Reference"
-
-msgctxt "field:akademy_matriculation.applications,age:"
-msgid "Idade"
-msgstr "Age"
-
-msgctxt "field:akademy_matriculation.applications,candidate:"
-msgid "Candidato"
-msgstr "Candidate"
-
-msgctxt "field:akademy_matriculation.applications,phase:"
-msgid "Fase"
-msgstr "Phase"
-
-msgctxt "field:akademy_matriculation.applications,lective_year:"
-msgid "Ano letivo"
-msgstr "Lective year"
-
-msgctxt "field:akademy_matriculation.applications,academic_level:"
-msgid "Nível acadêmico"
-msgstr "Academic level"
-
-msgctxt "field:akademy_matriculation.applications,area:"
-msgid "Área"
-msgstr "Area"
-
-msgctxt "field:akademy_matriculation.applications,course:"
-msgid "Curso"
-msgstr "Course"
-
-msgctxt "field:akademy_matriculation.applications,course_classe:"
-msgid "Classe"
-msgstr "Class"
-
-msgctxt "field:akademy_matriculation.applications,result:"
-msgid "Resultado"
-msgstr "Result"
-
-msgctxt "field:akademy_matriculation.applications.result,result:"
-msgid "Resultado"
-msgstr "Result"
-
-msgctxt "field:akademy_matriculation.applications.result,phase:"
-msgid "Fase"
-msgstr "Phase"
-
-msgctxt "field:akademy_matriculation.applications.result,application:"
-msgid "Candidatura"
-msgstr "Application"
-
-msgctxt "field:akademy_matriculation.applications.result,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Application criteria"
-
-msgctxt "field:akademy_matriculation.applications.result,lective_year:"
-msgid "Ano letivo"
-msgstr "Lective year"
-
-msgctxt "field:akademy_matriculation.student.transfer,description:"
-msgid "Descrição"
-msgstr "Description"
-
-msgctxt "field:akademy_matriculation.student.transfer,internal:"
-msgid "Interna"
-msgstr "Internal"
-
-msgctxt "field:akademy_matriculation.student.transfer,external:"
-msgid "Externa"
-msgstr "External"
-
-msgctxt "field:akademy_matriculation.student.transfer,lective_year:"
-msgid "Ano letivo"
-msgstr "Lective year"
-
-msgctxt "field:akademy_matriculation.student.transfer,academic_level:"
-msgid "Nível acadêmico"
-msgstr "Academic level"
-
-msgctxt "field:akademy_matriculation.student.transfer,area:"
-msgid "Área"
-msgstr "Area"
-
-msgctxt "field:akademy_matriculation.student.transfer,course:"
-msgid "Curso"
-msgstr "Course"
-
-msgctxt "field:akademy_matriculation.student.transfer,course_classe:"
-msgid "Classe"
-msgstr "Class"
-
-msgctxt "field:akademy_matriculation.student.transfer,student:"
-msgid "Discente"
-msgstr "Student"
-
-msgctxt "field:akademy_matriculation.student.transfer,student_transfer_discipline:"
-msgid "Disciplina"
-msgstr "Discipline"
-
-msgctxt "field:akademy_matriculation.student.transfer.discipline,course:"
-msgid "Curso"
-msgstr "Course"
-
-msgctxt "field:akademy_matriculation.student.transfer.discipline,average:"
-msgid "Média"
-msgstr "Average"
-
-msgctxt "field:akademy_matriculation.student.transfer.discipline,student_transfer:"
-msgid "Discente"
-msgstr "Student"
-
-msgctxt "field:akademy_matriculation.student.transfer.discipline,discipline:"
-msgid "Disciplina"
-msgstr "Discipline"
-
-msgctxt "field:akademy_matriculation.student.transfer.discipline,course_classe:"
-msgid "Classe"
-msgstr "Class"
-
-msgctxt "field:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
-msgid "Candidato"
-msgstr "Candidate"
-
-msgctxt "field:akademy_matriculation.wizmatriculation.create.start,is_transferred:"
-msgid "Transferido"
-msgstr "Transferred"
-
-msgctxt "field:akademy_matriculation.wizmatriculation.create.start,applications:"
-msgid "Candidato"
-msgstr "Application"
-
-msgctxt "field:akademy_matriculation.wizmatriculation.create.start,transferred:"
-msgid "Transferido"
-msgstr "Transferred"
-
-msgctxt "field:akademy_matriculation.wizassociatiodiscipline.create.start,classes:"
-msgid "Turma"
-msgstr "Class"
-
-msgctxt "field:akademy_matriculation.wizapplication_avaliation.create.start,applications_criteria:"
-msgid "Critério de admissão"
-msgstr "Admission criteria"
-
-msgctxt "field:akademy_configuration.matriculation.reference,name:"
-msgid "Nome"
-msgstr "Name"
-
-msgctxt "field:akademy_configuration.matriculation.reference,applications:"
-msgid "Modalidade de candidatura"
-msgstr "Application method"
-
-msgctxt "field:akademy_configuration.phase,code:"
-msgid "Código"
-msgstr "Code"
-
-msgctxt "field:akademy_configuration.phase,name:"
-msgid "Nome"
-msgstr "Name"
-
-msgctxt "field:akademy_configuration.phase,start:"
-msgid "Início"
-msgstr "Start"
-
-msgctxt "field:akademy_configuration.phase,end:"
-msgid "Término"
-msgstr "End"
-
-msgctxt "field:akademy_configuration.phase,lective_year:"
-msgid "Ano letivo"
-msgstr "Lective year"
-
-msgctxt "field:akademy_configuration.phase,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Application criteria"
-
-msgctxt "field:akademy_configuration.lective.year,phase:"
-msgid "Fase de admissão"
-msgstr "Admission phase"
-
-msgctxt "field:akademy_configuration.lective.year,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Admission criteria"
-
 msgctxt "field:akademy_configuration.academic.level,application_criteria:"
-msgid "Critério de admissão"
+msgid "Admission criteria"
 msgstr "Admission criteria"
-
-msgctxt "field:akademy_configuration.area,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Admission criteria"
-
-msgctxt "field:akademy_configuration.course,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Admission criteria"
-
-msgctxt "field:akademy_configuration.course.classe,application_criteria:"
-msgid "Critério de admissão"
-msgstr "Admission criteria"
-
-msgctxt "field:akademy_configuration.application.criteria,code:"
-msgid "Código"
-msgstr "Code"
-
-msgctxt "field:akademy_configuration.application.criteria,name:"
-msgid "Nome"
-msgstr "Name"
-
-msgctxt "field:akademy_configuration.application.criteria,description:"
-msgid "Descrição"
-msgstr "Description"
-
-msgctxt "field:akademy_configuration.application.criteria,age:"
-msgid "Idade"
-msgstr "Age"
-
-msgctxt "field:akademy_configuration.application.criteria,average:"
-msgid "Média"
-msgstr "Average"
-
-msgctxt "field:akademy_configuration.application.criteria,student_limit:"
-msgid "Total de vagas"
-msgstr "Student limit"
-
-msgctxt "field:akademy_configuration.application.criteria,lective_year:"
-msgid "Ano letivo"
-msgstr "Lective year"
 
 msgctxt "field:akademy_configuration.application.criteria,academic_level:"
-msgid "Nível académico"
+msgid "Academic level"
 msgstr "Academic level"
 
+msgctxt "field:akademy_configuration.application.criteria,age:"
+msgid "Age"
+msgstr "Age"
+
+msgctxt "field:akademy_configuration.application.criteria,application_result:"
+msgid "Result of applications"
+msgstr "Application results"
+
 msgctxt "field:akademy_configuration.application.criteria,area:"
-msgid "Área"
+msgid "Area"
 msgstr "Area"
 
+msgctxt "field:akademy_configuration.application.criteria,average:"
+msgid "Average"
+msgstr "Average"
+
+msgctxt "field:akademy_configuration.application.criteria,code:"
+msgid "Code"
+msgstr "Code"
+
 msgctxt "field:akademy_configuration.application.criteria,course:"
-msgid "Curso"
+msgid "Course"
 msgstr "Course"
 
 msgctxt "field:akademy_configuration.application.criteria,course_classe:"
-msgid "Classe"
-msgstr "Class"
+msgid "Year level"
+msgstr "Year level"
+
+msgctxt "field:akademy_configuration.application.criteria,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:akademy_configuration.application.criteria,lective_year:"
+msgid "Lective year"
+msgstr "Lective year"
+
+msgctxt "field:akademy_configuration.application.criteria,name:"
+msgid "Name"
+msgstr "Name"
 
 msgctxt "field:akademy_configuration.application.criteria,phase:"
-msgid "Fase"
+msgid "Phase"
 msgstr "Phase"
 
-msgctxt "field:akademy_configuration.application.criteria,application_result:"
-msgid "Resultado das candidaturas"
-msgstr "Result of applications"
+msgctxt "field:akademy_configuration.application.criteria,student_limit:"
+msgid "Student limit"
+msgstr "Student limit"
 
-msgctxt "wizard_button:akademy_matriculation.wizmatriculation.create,start,matriculation:"
-msgid "Cancelar"
-msgstr "Cancel"
+msgctxt "field:akademy_configuration.area,application_criteria:"
+msgid "Admission criteria"
+msgstr "Admission criteria"
 
-msgctxt "wizard_button:akademy_matriculation.wizmatriculation.create,start,matriculation:"
-msgid "Matricular"
-msgstr "Enroll"
+msgctxt "field:akademy_configuration.course,application_criteria:"
+msgid "Admission criteria"
+msgstr "Admission criteria"
 
-msgctxt "wizard_button:akademy_matriculation.wizassociatiodiscipline.create,start,association:"
-msgid "Cancelar"
-msgstr "Cancel"
+msgctxt "field:akademy_configuration.course.classe,application_criteria:"
+msgid "Admission criteria"
+msgstr "Admission criteria"
 
-msgctxt "wizard_button:akademy_matriculation.wizassociatiodiscipline.create,start,association:"
-msgid "Associar"
-msgstr "Associate"
+msgctxt "field:akademy_configuration.lective.year,application_criteria:"
+msgid "Admission criteria"
+msgstr "Admission criteria"
 
-msgctxt "wizard_button:akademy_matriculation.wizapplication_avaliation.create,start,application_avaliation:"
-msgid "Cancelar"
-msgstr "Cancel"
+msgctxt "field:akademy_configuration.lective.year,phase:"
+msgid "Admission phase"
+msgstr "Admission phase"
 
-msgctxt "wizard_button:akademy_matriculation.wizapplication_avaliation.create,start,application_avaliation:"
-msgid "Avaliar"
-msgstr "Avaliate"
+msgctxt "field:akademy_configuration.matriculation.reference,applications:"
+msgid "Application method"
+msgstr "Application method"
 
-msgctxt "help:akademy_matriculation.candidates,code:"
-msgid "Código do candidato."
-msgstr "Candidate code."
+msgctxt "field:akademy_configuration.matriculation.reference,name:"
+msgid "Name"
+msgstr "Name"
 
-msgctxt "help:akademy_matriculation.candidates,date_start:"
-msgid "Data de início da formação."
-msgstr "Training start date."
+msgctxt "field:akademy_configuration.phase,application_criteria:"
+msgid "Application criteria"
+msgstr "Application criteria"
 
-msgctxt "help:akademy_matriculation.candidates,date_end:"
-msgid "Data de término da formação."
-msgstr "Training end date."
+msgctxt "field:akademy_configuration.phase,code:"
+msgid "Code"
+msgstr "Code"
 
-msgctxt "help:akademy_matriculation.candidates,average:"
-msgid "Média adquirida no certificado."
-msgstr "Average acquired in the certificate."
+msgctxt "field:akademy_configuration.phase,end:"
+msgid "End"
+msgstr "End"
 
-msgctxt "help:akademy_matriculation.candidates,party:"
-msgid "Nome do candidato."
-msgstr "Candidate name."
+msgctxt "field:akademy_configuration.phase,lective_year:"
+msgid "Lective year"
+msgstr "Lective year"
 
-msgctxt "help:akademy_matriculation.candidates,institution:"
-msgid "Nome da instituição de formação."
-msgstr "Name of the training institution."
+msgctxt "field:akademy_configuration.phase,name:"
+msgid "Name"
+msgstr "Name"
 
-msgctxt "help:akademy_matriculation.applications,reference:"
-msgid "Escolha a modalidade de candidatura."
-msgstr "Choose the application method."
+msgctxt "field:akademy_configuration.phase,start:"
+msgid "Start"
+msgstr "Start"
 
-msgctxt "help:akademy_matriculation.applications,phase:"
-msgid "Fase de inscrição da candidatura."
-msgstr "Application registration phase."
+msgctxt "field:akademy_matriculation.applications,academic_level:"
+msgid "Academic level"
+msgstr "Academic level"
 
-msgctxt "help:akademy_matriculation.applications,lective_year:"
-msgid "Ano letivo que pretende se inscrever."
-msgstr "Academic year in which you intend to register."
+msgctxt "field:akademy_matriculation.applications,age:"
+msgid "Age"
+msgstr "Age"
 
-msgctxt "help:akademy_matriculation.applications,academic_level:"
-msgid "Nível acadêmico que pretende se inscrever."
-msgstr "Academic level you intend to enroll."
+msgctxt "field:akademy_matriculation.applications,area:"
+msgid "Area"
+msgstr "Area"
 
-msgctxt "help:akademy_matriculation.student.transfer,academic_level:"
-msgid "Nível acadêmico que pretende se inscrever."
-msgstr "Academic level you intend to enroll."
+msgctxt "field:akademy_matriculation.applications,candidate:"
+msgid "Candidate"
+msgstr "Candidate"
 
-msgctxt "help:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
-msgid "Matrícula para candidato."
-msgstr "Registration for candidate."
+msgctxt "field:akademy_matriculation.applications,company:"
+msgid "Institution"
+msgstr "Institution"
 
-msgctxt "help:akademy_matriculation.wizmatriculation.create.start,is_transferred:"
-msgid "Matrícula para discente transferido."
-msgstr "Registration for transferred students."
+msgctxt "field:akademy_matriculation.applications,course:"
+msgid "Course"
+msgstr "Course"
 
-msgctxt "help:akademy_matriculation.wizmatriculation.create.start,applications:"
-msgid "Caro utilizador será feita a matrícula do candidato."
-msgstr "Dear user, the candidate will be registered."
+msgctxt "field:akademy_matriculation.applications,course_classe:"
+msgid "Year level"
+msgstr "Year level"
 
-msgctxt "help:akademy_matriculation.wizmatriculation.create.start,transferred:"
-msgid "Caro utilizador será feita a matrícula do discente transfêrido."
-msgstr "Dear user, the transfer student will be enrolled."
+msgctxt "field:akademy_matriculation.applications,description:"
+msgid "Description"
+msgstr "Description"
 
-msgctxt "help:akademy_matriculation.wizassociatiodiscipline.create.start,classes:"
-msgid ""
-"Caro utilizador será feita uma associação entre os discentes desta turma e as displinas "
-"existentes no plano de estudo."
-msgstr ""
-"Dear user, an association will be made between the students in this class and the subjects "
-"in the study plan."
+msgctxt "field:akademy_matriculation.applications,lective_year:"
+msgid "Lective year"
+msgstr "Lective year"
 
-msgctxt "help:akademy_matriculation.wizapplication_avaliation.create.start,applications_criteria:"
-msgid "Caro utilizador escolha o critério de admissão."
-msgstr "Dear user, choose your admission criteria."
+msgctxt "field:akademy_matriculation.applications,phase:"
+msgid "Phase"
+msgstr "Phase"
 
-msgctxt "help:akademy_configuration.matriculation.reference,name:"
-msgid "Nome da referência de candidatura.\nEx: Particular, Bolseiro"
-msgstr "Name of the application reference.\nEx: Private, Scholarship holder"
+msgctxt "field:akademy_matriculation.applications,reference:"
+msgid "Modality"
+msgstr "Modality"
 
-msgctxt "help:akademy_configuration.phase,code:"
-msgid "Código do fase."
-msgstr "Phase code."
+msgctxt "field:akademy_matriculation.applications,result:"
+msgid "Result"
+msgstr "Result"
 
-msgctxt "help:akademy_configuration.phase,name:"
-msgid "Nome da fase de admissão."
-msgstr "Admission phase name."
+msgctxt "field:akademy_matriculation.applications,state:"
+msgid "Evaluated"
+msgstr "Evaluated"
 
-msgctxt "help:akademy_configuration.phase,start:"
-msgid "Data de início do ano letivo."
-msgstr "Start date of the academic year."
+msgctxt "field:akademy_matriculation.applications.result,application:"
+msgid "Application"
+msgstr "Application"
 
-msgctxt "help:akademy_configuration.phase,end:"
-msgid "Data de término do ano letivo."
-msgstr "End date of the academic year."
+msgctxt ""
+"field:akademy_matriculation.applications.result,application_criteria:"
+msgid "Application criteria"
+msgstr "Admission criteria"
 
-msgctxt "help:akademy_configuration.application.criteria,code:"
-msgid "Código do critério de admissão."
-msgstr "Admission criteria code."
+msgctxt "field:akademy_matriculation.applications.result,lective_year:"
+msgid "Lective year"
+msgstr "Lective year"
 
-msgctxt "help:akademy_configuration.application.criteria,name:"
-msgid "Nome do critéio de admissão."
-msgstr "Admission criteria name."
+msgctxt "field:akademy_matriculation.applications.result,phase:"
+msgid "Phase"
+msgstr "Phase"
+
+msgctxt "field:akademy_matriculation.applications.result,result:"
+msgid "Result"
+msgstr "Result"
+
+msgctxt "field:akademy_matriculation.candidates,academic_level:"
+msgid "Academic level"
+msgstr "Academic level"
+
+msgctxt "field:akademy_matriculation.candidates,applications:"
+msgid "Applications"
+msgstr "Applications"
+
+msgctxt "field:akademy_matriculation.candidates,area:"
+msgid "Area"
+msgstr "Area"
+
+msgctxt "field:akademy_matriculation.candidates,average:"
+msgid "Average"
+msgstr "Average"
+
+msgctxt "field:akademy_matriculation.candidates,code:"
+msgid "Code"
+msgstr "Code"
+
+msgctxt "field:akademy_matriculation.candidates,course:"
+msgid "Course"
+msgstr "Course"
+
+msgctxt "field:akademy_matriculation.candidates,date_end:"
+msgid "End date"
+msgstr "End date"
+
+msgctxt "field:akademy_matriculation.candidates,date_start:"
+msgid "Start date"
+msgstr "Start date
+
+msgctxt "field:akademy_matriculation.candidates,institution:"
+msgid "Institution"
+msgstr "Institution"
+
+msgctxt "field:akademy_matriculation.candidates,party:"
+msgid "Party"
+msgstr "Party"
+
+msgctxt "field:akademy_matriculation.student.transfer,academic_level:"
+msgid "Academic level"
+msgstr "Academic level"
+
+msgctxt "field:akademy_matriculation.student.transfer,area:"
+msgid "Area"
+msgstr "Area"
+
+msgctxt "field:akademy_matriculation.student.transfer,course:"
+msgid "Course"
+msgstr "Course"
+
+msgctxt "field:akademy_matriculation.student.transfer,course_classe:"
+msgid "Year level"
+msgstr "Year level"
+
+msgctxt "field:akademy_matriculation.student.transfer,description:"
+msgid "Description"
+msgstr "Description"
+
+msgctxt "field:akademy_matriculation.student.transfer,external:"
+msgid "External"
+msgstr "External"
+
+msgctxt "field:akademy_matriculation.student.transfer,internal:"
+msgid "Internal"
+msgstr "Internal"
+
+msgctxt "field:akademy_matriculation.student.transfer,lective_year:"
+msgid "Lective year"
+msgstr "Lective year"
+
+msgctxt "field:akademy_matriculation.student.transfer,student:"
+msgid "Student"
+msgstr "Student"
+
+msgctxt ""
+"field:akademy_matriculation.student.transfer,student_transfer_discipline:"
+msgid "Discipline"
+msgstr "Discipline"
+
+msgctxt "field:akademy_matriculation.student.transfer.discipline,average:"
+msgid "Average"
+msgstr "Average"
+
+msgctxt "field:akademy_matriculation.student.transfer.discipline,course:"
+msgid "Course"
+msgstr "Course"
+
+msgctxt ""
+"field:akademy_matriculation.student.transfer.discipline,course_classe:"
+msgid "Year level"
+msgstr "Year level"
+
+msgctxt "field:akademy_matriculation.student.transfer.discipline,discipline:"
+msgid "Discipline"
+msgstr "Discipline"
+
+msgctxt ""
+"field:akademy_matriculation.student.transfer.discipline,student_transfer:"
+msgid "Student"
+msgstr "Student"
+
+msgctxt ""
+"field:akademy_matriculation.wizapplication_avaliation.create.start,applications_criteria:"
+msgid "Admission criteria"
+msgstr "Admission criteria"
+
+msgctxt ""
+"field:akademy_matriculation.wizassociatiodiscipline.create.start,classes:"
+msgid "Class"
+msgstr "Classes"
+
+msgctxt ""
+"field:akademy_matriculation.wizmatriculation.create.start,applications:"
+msgid "Application"
+msgstr "Application"
+
+msgctxt ""
+"field:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
+msgid "Candidate"
+msgstr "Candidato"
+
+msgctxt ""
+"field:akademy_matriculation.wizmatriculation.create.start,is_transferred:"
+msgid "Transferred"
+msgstr "Transferred"
+
+msgctxt ""
+"field:akademy_matriculation.wizmatriculation.create.start,transferred:"
+msgid "Transferred"
+msgstr "Transferred"
+
+msgctxt "field:party.party,candidates:"
+msgid "Candidates"
+msgstr "Candidates"
 
 msgctxt "help:akademy_configuration.application.criteria,age:"
-msgid "Informe a idade máxima para admissão."
+msgid "Enter the maximum age for admission."
 msgstr "Enter the maximum age for admission."
 
 msgctxt "help:akademy_configuration.application.criteria,average:"
-msgid "Informe a média mínima para admissão."
+msgid "Enter the minimum average for admission."
 msgstr "Enter the minimum average for admission."
 
+msgctxt "help:akademy_configuration.application.criteria,code:"
+msgid "Admission criteria code."
+msgstr "Admission criteria code."
+
+msgctxt "help:akademy_configuration.application.criteria,course_classe:"
+msgid "Year level name."
+msgstr "Year level name."
+
+msgctxt "help:akademy_configuration.application.criteria,name:"
+msgid "Admission criteria name."
+msgstr "Admission criteria name."
+
 msgctxt "help:akademy_configuration.application.criteria,student_limit:"
-msgid "Informe o limite de discentes por admitir."
+msgid "Enter the limit of students to be admitted."
 msgstr "Enter the limit of students to be admitted."
 
-msgctxt "error:akademy_matriculation.candidates:"
+msgctxt "help:akademy_configuration.matriculation.reference,name:"
 msgid ""
-"Não foi possível cadastrar o novo candidato, por favor verificar se já existe um "
-"candidato, neste nível acadêmico."
+"Name of the application reference.\n"
+"Ex: Private, Scholarship holder"
 msgstr ""
-"It was not possible to register the new candidate, please check if there is already a "
-"candidate at this academic level."
+"Name of the application reference.\n"
+"Ex: Private, Scholarship holder"
 
-msgctxt "error:akademy_matriculation.candidates:"
+msgctxt "help:akademy_configuration.phase,code:"
+msgid "Phase code."
+msgstr "Phase code."
+
+msgctxt "help:akademy_configuration.phase,end:"
+msgid "End date of the academic year."
+msgstr "End date of the academic year."
+
+msgctxt "help:akademy_configuration.phase,name:"
+msgid "Admission phase name."
+msgstr "Admission phase name."
+
+msgctxt "help:akademy_configuration.phase,start:"
+msgid "Start date of the academic year."
+msgstr "Start date of the academic year."
+
+msgctxt "help:akademy_matriculation.applications,academic_level:"
+msgid "Academic level you intend to enroll."
+msgstr "Academic level you intend to enroll."
+
+msgctxt "help:akademy_matriculation.applications,company:"
+msgid "Name of the institution."
+msgstr "Name of the institution."
+
+msgctxt "help:akademy_matriculation.applications,lective_year:"
+msgid "Academic year in which you intend to register."
+msgstr "Academic year in which you intend to register."
+
+msgctxt "help:akademy_matriculation.applications,phase:"
+msgid "Application registration phase."
+msgstr "Application registration phase."
+
+msgctxt "help:akademy_matriculation.applications,reference:"
+msgid "Choose the application method."
+msgstr "Choose the application method."
+
+msgctxt "help:akademy_matriculation.candidates,average:"
+msgid "Average acquired in the certificate."
+msgstr "Average acquired in the certificate."
+
+msgctxt "help:akademy_matriculation.candidates,code:"
+msgid "Candidate code."
+msgstr "Candidate code."
+
+msgctxt "help:akademy_matriculation.candidates,date_end:"
+msgid "Training end date."
+msgstr "Training end date."
+
+msgctxt "help:akademy_matriculation.candidates,date_start:"
+msgid "Training start date."
+msgstr "Training start date."
+
+msgctxt "help:akademy_matriculation.candidates,institution:"
+msgid "Name of the training institution."
+msgstr "Name of the training institution."
+
+msgctxt "help:akademy_matriculation.candidates,party:"
+msgid "Candidate name."
+msgstr "Candidate name."
+
+msgctxt "help:akademy_matriculation.student.transfer,academic_level:"
+msgid "Name of academic level."
+msgstr "Name of academic level."
+
+msgctxt "help:akademy_matriculation.student.transfer,area:"
+msgid "Area name."
+msgstr "Area name."
+
+msgctxt "help:akademy_matriculation.student.transfer,course:"
+msgid "Course name."
+msgstr "Course name."
+
+msgctxt "help:akademy_matriculation.student.transfer,course_classe:"
+msgid "Year level name."
+msgstr "Year level name."
+
+msgctxt "help:akademy_matriculation.student.transfer,external:"
+msgid "Coming from another institution."
+msgstr "Coming from another institution."
+
+msgctxt "help:akademy_matriculation.student.transfer,internal:"
+msgid "Leaving the institution."
+msgstr "Leaving the institution."
+
+msgctxt "help:akademy_matriculation.student.transfer,lective_year:"
+msgid "Name of the school year."
+msgstr "Name of the school year."
+
+msgctxt ""
+"help:akademy_matriculation.student.transfer.discipline,course_classe:"
+msgid "Year level name."
+msgstr "Year level name."
+
+msgctxt ""
+"help:akademy_matriculation.wizapplication_avaliation.create.start,applications_criteria:"
+msgid "Choose your admission criteria."
+msgstr "Choose your admission criteria."
+
+msgctxt ""
+"help:akademy_matriculation.wizassociatiodiscipline.create.start,classes:"
 msgid ""
-"Não foi possível cadastrar o novo candidato, por favor verifica a data de matrícula e "
-"conclusão da formação acadêmico."
+"An association will be made between the students in this class and the "
+"subjects in the study plan."
 msgstr ""
-"It was not possible to register the new candidate, please check the date of registration "
-"and completion of academic training."
+"An association will be made between the students in this class and the "
+"subjects in the study plan."
 
-msgctxt "error:akademy_matriculation.candidates:"
-msgid ""
-"Não foi possível cadastrar o novo candidato, por favor verificar se a média do certificado "
-"é menor que 10."
-msgstr ""
-"It was not possible to register the new candidate, please check if the certificate average "
-"is less than 10."
+msgctxt ""
+"help:akademy_matriculation.wizmatriculation.create.start,applications:"
+msgid "Dear user, the candidate will be registered."
+msgstr "Dear user, the candidate will be registered."
 
-msgctxt "error:akademy_matriculation.candidates:"
-msgid ""
-"Não foi possível cadastrar o novo candidato, por favor verificar se a média do certificado é "
-"maior que 20."
-msgstr ""
-"It was not possible to register the new candidate, please check if the certificate average "
-"is greater than 20."
+msgctxt ""
+"help:akademy_matriculation.wizmatriculation.create.start,is_candidate:"
+msgid "Registration for candidate."
+msgstr "Registration for candidate."
 
-msgctxt "error:akademy_matriculation.applications:"
-msgid ""
-"Não foi possível inscrever o candidato, porque o candidato já esta inscrito neste curso, "
-"fase e ano letivo."
-msgstr ""
-"It was not possible to register the candidate, because the candidate is already registered "
-"for this course, phase and academic year."
+msgctxt ""
+"help:akademy_matriculation.wizmatriculation.create.start,is_transferred:"
+msgid "Registration for transferred students."
+msgstr "Registration for transferred students."
 
-msgctxt "error:akademy_matriculation.applications.result:"
-msgid "A candidatura já foi avaliada."
-msgstr "The application has already been evaluated."
+msgctxt ""
+"help:akademy_matriculation.wizmatriculation.create.start,transferred:"
+msgid "Dear user, the transfer student will be enrolled."
+msgstr "Dear user, the transfer student will be enrolled."
 
-msgctxt "error:akademy_matriculation.student.transfer:"
-msgid ""
-"Não foi possível cadastrar a transferência, por favor verifique se o discente já se encontra "
-"com uma transferência com estes dados."
-msgstr ""
-"It was not possible to register the transfer, please check if the student already "
-"has a transfer with these details."
+msgctxt "model:akademy_configuration.application.criteria,string:"
+msgid "Akademy Configuration Application Criteria"
+msgstr "Application criteria"
 
-msgctxt "error:akademy_matriculation.student.transfer.discipline:"
-msgid ""
-"Não foi possível associar está disciplina ao discente, por favor verifique se o mesmo "
-"já têm esta disciplina associada."
-msgstr ""
-"It was not possible to associate this subject with the student, please check if they already "
-"have this subject associated."
+msgctxt "model:akademy_configuration.matriculation.reference,string:"
+msgid "Akademy Configuration Matriculation Reference"
+msgstr "Registration reference"
 
-msgctxt "error:akademy_configuration.matriculation.reference:"
-msgid ""
-"Não foi possível cadastrar a nova referência de candidatura, por favor verificar se o "
-"nome inserido já existe."
-msgstr ""
-"It was not possible to register the new application reference, please check if the name "
-"entered already exists."
-
-msgctxt "error:akademy_configuration.phase:"
-msgid ""
-"Não foi possível cadastrar a nova fase de admissão, por favor verificar se o nome ou "
-"código inserido já existe."
-msgstr ""
-"It was not possible to register the new admission phase, please check if the name or "
-"code entered already exists."
-
-msgctxt "error:akademy_configuration.phase:"
-msgid ""
-"Não foi possível cadastrar o novo ano letivo, por favor verificar se a data de início é "
-"menor que a data de término."
-msgstr ""
-"It was not possible to register the new academic year, please check if the start date is "
-"less than the end date."
-
-msgctxt "error:akademy_configuration.application.criteria:"
-msgid ""
-"Não foi possível cadastrar o novo critério de admissão, por favor verificar se já existe um "
-"critério de admissão, para  está fase de admissão."
-msgstr ""
-"It was not possible to register the new admission criteria, please check if there is already "
-"an admission criteria for this admission phase."
-
-msgctxt "error:akademy_configuration.application.criteria:"
-msgid ""
-"Não foi possível cadastrar o novo critério de admissão, por favor verificar se a idade inserida."
-msgstr ""
-"It was not possible to register the new admission criteria, please check the age entered."
-
-msgctxt "error:akademy_configuration.application.criteria:"
-msgid ""
-"Não foi possível cadastrar o novo critério de admissão, por favor verificar se a média esta "
-"abaixo de 10 valores."
-msgstr ""
-"It was not possible to register the new admission criteria, please check if the average "
-"is below 10 points."
-
-msgctxt "error:akademy_configuration.application.criteria:"
-msgid ""
-"Não foi possível cadastrar o novo critério de admissão, por favor verificar se a média esta "
-"acima de 20 valores."
-msgstr ""
-"It was not possible to register the new admission criteria, please check if the average "
-"is above 20 values."
-
-msgctxt "error:akademy_configuration.application.criteria:"
-msgid ""
-"Não foi possível cadastrar o novo critério de admissão, por favor verifica o limite de "
-"vagas disponivés."
-msgstr ""
-"It was not possible to register the new admission criteria, please check the limit of "
-"available places."
-
-msgctxt "view:akademy_configuration.application.criteria:"
-msgid "Descrição"
-msgstr "Description"
-
-msgctxt "view:akademy_matriculation.applications:"
-msgid "Descrição"
-msgstr "Description"
-
-msgctxt "view:akademy_matriculation.applications:"
-msgid "Resultados"
-msgstr "Results"
-
-msgctxt "view:akademy_matriculation.candidates:"
-msgid "Candidaturas"
-msgstr "Applications"
-
-msgctxt "view:akademy_configuration.lective.year:"
-msgid "Fases"
+msgctxt "model:akademy_configuration.phase,string:"
+msgid "Akademy Configuration Phase"
 msgstr "Phases"
 
-msgctxt "view:akademy_configuration.phase:"
-msgid "Critérios"
-msgstr "Criteria"
+msgctxt "model:akademy_matriculation.applications,string:"
+msgid "Akademy Matriculation Applications"
+msgstr "Applications"
 
-msgctxt "view:akademy_matriculation.student.transfer:"
-msgid "Descrição"
-msgstr "Description"
+msgctxt "model:akademy_matriculation.applications.result,string:"
+msgid "Akademy Matriculation Applications Result"
+msgstr "Applications result"
 
-msgctxt "view:akademy_matriculation.student.transfer:"
-msgid "Disciplinas"
-msgstr "Disciplines"
+msgctxt "model:akademy_matriculation.candidates,string:"
+msgid "Akademy Matriculation Candidates"
+msgstr "Candidates"
 
-msgctxt "model:ir.action,name:act_matriculation_wizard"
-msgid "Matrícular"
-msgstr "Enroll"
+msgctxt "model:akademy_matriculation.student.transfer,string:"
+msgid "Akademy Matriculation Student Transfer"
+msgstr "Transfers"
 
-msgctxt "model:ir.action,name:act_associationdiscipline_wizard"
-msgid "Associar disciplina"
+msgctxt "model:akademy_matriculation.student.transfer.discipline,string:"
+msgid "Akademy Matriculation Student Transfer Discipline"
+msgstr "Subject transfers"
+
+msgctxt ""
+"model:akademy_matriculation.wizapplication_avaliation.create.start,string:"
+msgid "Akademy Matriculation Wizapplication Avaliation Create Start"
+msgstr "Evaluate applications"
+
+msgctxt ""
+"model:akademy_matriculation.wizassociatiodiscipline.create.start,string:"
+msgid "Akademy Matriculation Wizassociatiodiscipline Create Start"
 msgstr "Associate discipline"
 
+msgctxt "model:akademy_matriculation.wizmatriculation.create.start,string:"
+msgid "Akademy Matriculation Wizmatriculation Create Start"
+msgstr "Enroll"
+
 msgctxt "model:ir.action,name:act_application_avaliation_wizard"
-msgid "Avaliar candidatura"
+msgid "Evaluate application"
 msgstr "Evaluate application"
+
+msgctxt "model:ir.action,name:act_applications_result"
+msgid "Results"
+msgstr "Results"
+
+msgctxt "model:ir.action,name:act_associationdiscipline_wizard"
+msgid "Association discipline"
+msgstr "Associate discipline"
+
+msgctxt "model:ir.action,name:act_candidate_applications"
+msgid "Applications"
+msgstr "Applications"
+
+msgctxt "model:ir.action,name:act_candidates"
+msgid "Candidates"
+msgstr "Candidates"
+
+msgctxt "model:ir.action,name:act_matriculation_reference"
+msgid "Matriculation Reference"
+msgstr "Matriculation reference"
+
+msgctxt "model:ir.action,name:act_matriculation_wizard"
+msgid "Matriculation"
+msgstr "Matriculation"
+
+msgctxt "model:ir.action,name:act_student_transfer"
+msgid "Transfers"
+msgstr "Transfers"
+
+msgctxt "model:ir.action,name:application_criteria_report"
+msgid "Admission criteria"
+msgstr "Admission criteria"
+
+msgctxt "model:ir.action,name:applications_result_report"
+msgid "College entrance exam guidelines"
+msgstr "College entrance exam guidelines"
+
+msgctxt "model:ir.action,name:candidate_report"
+msgid "Candidate profile"
+msgstr "Candidate profile"
+
+msgctxt "model:ir.action,name:equivalence_discipline_report"
+msgid "Generate equivalence"
+msgstr "Generate equivalence"
+
+msgctxt "model:ir.action,name:student_transfer_internal_report"
+msgid "Internal transfer"
+msgstr "Internal transfer"
+
+msgctxt "model:ir.action,name:student_transfer_report"
+msgid "External transfer"
+msgstr "External transfer"
+
+msgctxt "model:ir.ui.menu,name:akademy_application_avaliation_wiz"
+msgid "Evaluate application"
+msgstr "Evaluate application"
+
+msgctxt "model:ir.ui.menu,name:akademy_applications_result"
+msgid "Results"
+msgstr "Results"
+
+msgctxt "model:ir.ui.menu,name:akademy_associationdiscipline_wiz"
+msgid "Association discipline"
+msgstr "Association discipline"
+
+msgctxt "model:ir.ui.menu,name:akademy_candidate_applications"
+msgid "Applications"
+msgstr "Applications"
+
+msgctxt "model:ir.ui.menu,name:akademy_candidates"
+msgid "Candidates"
+msgstr "Candidates"
+
+msgctxt "model:ir.ui.menu,name:akademy_matriculation_reference"
+msgid "Matriculation Reference"
+msgstr "Matriculation reference"
+
+msgctxt "model:ir.ui.menu,name:akademy_matriculation_student"
+msgid "Matriculation"
+msgstr "Matriculation"
+
+msgctxt "model:ir.ui.menu,name:akademy_registrations"
+msgid "Matriculation"
+msgstr "Matriculation"
+
+msgctxt "model:ir.ui.menu,name:akademy_student_transfer"
+msgid "Transfers"
+msgstr "Transfers"
+
+msgctxt "selection:akademy_matriculation.applications.result,result:"
+msgid "Admitted"
+msgstr "Admitted"
+
+msgctxt "selection:akademy_matriculation.applications.result,result:"
+msgid "Analyzing"
+msgstr "Analyzing"
+
+msgctxt "selection:akademy_matriculation.applications.result,result:"
+msgid "Not allowed"
+msgstr "Not allowed"
+
+msgctxt "selection:akademy_matriculation.applications.result,result:"
+msgid "Waiting list"
+msgstr "Waiting list"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizapplication_avaliation.create,start,application_avaliation:"
+msgid "Evaluate"
+msgstr "Evaluate"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizapplication_avaliation.create,start,end:"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizassociatiodiscipline.create,start,association:"
+msgid "Associate"
+msgstr "Associate"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizassociatiodiscipline.create,start,end:"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizmatriculation.create,start,end:"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt ""
+"wizard_button:akademy_matriculation.wizmatriculation.create,start,matriculation:"
+msgid "Enroll"
+msgstr "Enroll"

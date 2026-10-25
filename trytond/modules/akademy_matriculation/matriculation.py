@@ -1,6 +1,5 @@
 # This file is part of SAGE Education.   The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-
 from trytond.model import Check, ModelSQL, ModelView, Unique, fields, sort
 from trytond.wizard import Button, StateTransition, StateView, Wizard
 from trytond.pyson import Bool, Eval, Not
@@ -10,37 +9,43 @@ from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 
 from ..akademy_classe.classe import ClasseStudentDiscipline
-from ..akademy_classe.variables import sel_result
+
+_APPLICATION_RESULT = (
+    ('analyzing', 'Analyzing'),
+    ('admitted', 'Admitted'),
+    ('not_allowed', 'Not allowed'),
+    ('waiting_list', 'Waiting list')
+)
 
 
 class Candidates(ModelSQL, ModelView):
     'Candidates'
     __name__ = 'akademy_matriculation.candidates'      
 
-    code = fields.Char('Código', size=20,
-        help="Código do candidato.")
-    date_start = fields.Date('Data de início',
-        help="Data de início da formação.")
-    date_end = fields.Date('Data de conclusão',
-        help="Data de término da formação.") 
-    average = fields.Numeric('Média', digits=(2,1), required=True, 
-        help=u'Média adquirida no certificado.')
-    party = fields.Many2One('party.party', 'Nome', 
+    code = fields.Char('Code', size=20,
+        help="Candidate code.")
+    date_start = fields.Date('Start date',
+        help="Training start date.")
+    date_end = fields.Date('End date',
+        help="Training end date.") 
+    average = fields.Numeric('Average', digits=(2,1), required=True, 
+        help=u'Average acquired in the certificate.')
+    party = fields.Many2One('party.party', 'Party', 
         required=True, domain=[('is_person', '=', True)],
-        ondelete="RESTRICT", help="Nome do candidato.")   
-    institution = fields.Many2One('company.company', 'Instituição', 
+        ondelete="RESTRICT", help="Candidate name.")   
+    institution = fields.Many2One('company.company', 'Institution', 
         required=True, ondelete="RESTRICT",
-        help="Nome da instituição de formação.")       
-    area = fields.Many2One('akademy_configuration.area', 'Área', 
+        help="Name of the training institution.")       
+    area = fields.Many2One('akademy_configuration.area', 'Area', 
         domain=[('academic_level', '=', Eval('academic_level', -1))], 
         depends=['academic_level'], required=True, ondelete="RESTRICT")
-    course = fields.Many2One('akademy_configuration.course', 'Curso', 
+    course = fields.Many2One('akademy_configuration.course', 'Course', 
         domain=[('area', '=', Eval('area', -1))], 
         depends=['area'], required=True, ondelete="RESTRICT")
     academic_level = fields.Many2One('akademy_configuration.academic.level', 
-        'Nível acadêmico', required=True, ondelete="RESTRICT") 
+        'Academic level', required=True, ondelete="RESTRICT") 
     applications = fields.One2Many('akademy_matriculation.applications', 
-        'candidate', 'Candidaturas')
+        'candidate', 'Applications')
 
     @classmethod
     def __setup__(cls):
@@ -48,26 +53,15 @@ class Candidates(ModelSQL, ModelView):
         table = cls.__table__()
         cls._sql_constraints = [
             ('key', Unique(table, table.party, table.academic_level),
-            u'Não foi possível cadastrar o novo candidato, por favor verificar se já existe um candidato, neste nível acadêmico.'),
+            u'It was not possible to register the new candidate, please check if there is already a candidate at this academic level.'),
             ('duration', Check(table, table.date_start < table.date_end),
-            u'Não foi possível cadastrar o novo candidato, por favor verifica a data de matrícula e conclusão da formação acadêmico.'),
+            u'It was not possible to register the new candidate, please check the date of registration and completion of academic training.'),
             ('min_average', Check(table, table.average >= 10),
-            u'Não foi possível cadastrar o novo candidato, por favor verificar se a média do certificado é menor que 10.'),
+            u'It was not possible to register the new candidate, please check if the certificate average is less than 10.'),
             ('max_average', Check(table, table.average <= 20),
-            u'Não foi possível cadastrar o novo candidato, por favor verificar se a média do certificado é maior que 20.')
+            u'It was not possible to register the new candidate, please check if the certificate average is greater than 20.')
         ]
         cls._order = [('party', 'ASC')]
-
-    '''
-    @classmethod
-    def delete(cls, candidates):
-        for candidate in candidates:
-            for application in candidate.applications:
-                if application.state == False:
-                    super(Candidates, cls).delete(candidate)
-                else:
-                    raise UserError("Não foi possível eliminar a candidatura, por favor verificar se a mesma encontra-se bloqueada.")
-    '''
             
     def get_rec_name(self, name):
         return self.party.rec_name
@@ -81,38 +75,38 @@ class Applications(ModelSQL, ModelView):
     'Applications'
     __name__ = 'akademy_matriculation.applications' 
             
-    state = fields.Boolean('Avaliado')
-    description = fields.Text('Descrição')
+    state = fields.Boolean('Evaluated')
+    description = fields.Text('Description')
     reference = fields.Many2One('akademy_configuration.matriculation.reference', 
-        'Modalidade', required=True, help="Escolha a modalidade de candidatura.")
+        'Modality', required=True, help="Choose the application method.")
     age = fields.Function(
         fields.Integer(
-            'Idade'
+            'Age'
         ), 'on_change_with_age')
     candidate = fields.Many2One('akademy_matriculation.candidates', 
-        'Candidato', required=True, ondelete="RESTRICT")
-    phase = fields.Many2One('akademy_configuration.phase', 'Fase', 
-        required=True, ondelete="RESTRICT", help="Fase de inscrição da candidatura.")
+        'Candidate', required=True, ondelete="RESTRICT")
+    phase = fields.Many2One('akademy_configuration.phase', 'Phase', 
+        required=True, ondelete="RESTRICT", help="Application registration phase.")
     lective_year = fields.Many2One('akademy_configuration.lective.year', 
-        'Ano letivo', required=True, ondelete="RESTRICT",
-        help="Ano letivo que pretende se inscrever.")
+        'Lective year', required=True, ondelete="RESTRICT",
+        help="Academic year in which you intend to register.")
     academic_level = fields.Many2One('akademy_configuration.academic.level', 
-        'Nível acadêmico', required=True, ondelete="RESTRICT",
-        help="Nível acadêmico que pretende se inscrever.")
-    area = fields.Many2One('akademy_configuration.area', 'Área', 
+        'Academic level', required=True, ondelete="RESTRICT",
+        help="Academic level you intend to enroll.")
+    area = fields.Many2One('akademy_configuration.area', 'Area', 
         domain=[('academic_level', '=', Eval('academic_level', -1))],
         depends=['academic_level'], required=True, ondelete="RESTRICT")    
-    course = fields.Many2One('akademy_configuration.course', 'Curso', 
+    course = fields.Many2One('akademy_configuration.course', 'Course', 
         domain=[('area','=',Eval('area', -1))],
         depends=['area'], required=True, ondelete="RESTRICT")
-    course_classe = fields.Many2One('akademy_configuration.course.classe', 'Classe',
+    course_classe = fields.Many2One('akademy_configuration.course.classe', 'Year level',
         domain=[('course', '=', Eval('course', 1))],
         depends=['course'], required=True, ondelete="RESTRICT")
     company = fields.Many2One(
-        'company.company', 'Instituição', #required=True, 
-        ondelete="RESTRICT", help="Nome da instituição.") 
+        'company.company', 'Institution', #required=True, 
+        ondelete="RESTRICT", help="Name of the institution.") 
     result = fields.One2Many('akademy_matriculation.applications.result', 
-        'application', 'Resultado', 
+        'application', 'Result', 
         states={'invisible': Not(Bool(Eval('state')))}, depends=['state'])
 
     @classmethod
@@ -121,19 +115,9 @@ class Applications(ModelSQL, ModelView):
         table = cls.__table__()
         cls._sql_constraints = [
             ('key', Unique(table, table.candidate, table.course, table.phase, table.lective_year),
-            u'Não foi possível inscrever o candidato, porque o candidato já esta inscrito neste curso, fase e ano letivo.')
+            u'It was not possible to register the candidate, because the candidate is already registered for this course, phase and academic year.')
         ]       
-        cls._order = [('candidate.party', 'ASC')]     
-
-    '''
-    @classmethod
-    def delete(cls, applications):
-        for application in applications:
-            if application.state == False:
-                super(Applications, cls).delete(application)
-            else:
-                raise UserError("Não foi possível eliminar q candidatura, por favor verificar se a mesma encontra-se bloqueada.")
-    '''
+        cls._order = [('candidate.party', 'ASC')] 
     
     def get_rec_name(self, name):
         return self.candidate.rec_name
@@ -168,20 +152,22 @@ class Applications(ModelSQL, ModelView):
                     if ((application_criteria.average <= application.candidate.average)
                     and (application_criteria.age >= application.age)
                     and (application_criteria.phase >= application.phase)):
-                        result_avaliation = 'Admitido'
-                        Applications.application_admission(ApplicationResult, application, application_criteria, result_avaliation, lective_year) 
+                        result_avaliation = 'admitted'
+                        Applications.application_admission(
+                            ApplicationResult, application, application_criteria, result_avaliation, lective_year) 
                     else:                   
-                        result_avaliation = 'Não admitido'
-                        Applications.application_admission(ApplicationResult, application, application_criteria, result_avaliation, lective_year)
+                        result_avaliation = 'not_allowed'
+                        Applications.application_admission(
+                            ApplicationResult, application, application_criteria, result_avaliation, lective_year)
         else:
-            raise UserError("Não foi possível avaliar a candidatura, por favor,"+
-                            " verifica se existe pelo menos um critério de admissão para o curso de "+
+            raise UserError("Unable to evaluate the application; please check if"+
+                            " registration meet at least one admission criterion for the course "+
                             application.course.name+".")
     
     @classmethod
     def application_admission(cls, ApplicationResult, application, criteria, result_avaliation, lective_year):                 
         total_application_admission = ApplicationResult.search([
-            ('application_criteria', '=', criteria), ('result', '=', 'Admitido')
+            ('application_criteria', '=', criteria), ('result', '=', 'admitted')
             ]) 
         
         if criteria.student_limit > len(total_application_admission):  
@@ -204,7 +190,7 @@ class Applications(ModelSQL, ModelView):
                 
                 Applications.application_change_state(application)
         else:
-            raise UserError("Já atingiu o limite máximo de vagas disponíveis.") 
+            raise UserError("Already reached the maximum number of available places.") 
 
     @classmethod
     def application_change_state(cls, application):        
@@ -216,14 +202,14 @@ class ApplicationsResult(ModelSQL, ModelView):
     'Applications Result'
     __name__ = 'akademy_matriculation.applications.result'
         
-    result = fields.Selection(selection=sel_result, string=u'Resultado')  
-    phase = fields.Many2One('akademy_configuration.phase', 'Fase', required=True)
+    result = fields.Selection(selection=_APPLICATION_RESULT, string=u'Result')  
+    phase = fields.Many2One('akademy_configuration.phase', 'Phase', required=True)
     application = fields.Many2One('akademy_matriculation.applications', 
-        'Candidatura', required=True, ondelete="RESTRICT")
+        'Application', required=True, ondelete="RESTRICT")
     application_criteria = fields.Many2One('akademy_configuration.application.criteria', 
-        'Critério de admissão', required=True, ondelete="RESTRICT")
+        'Application criteria', required=True, ondelete="RESTRICT")
     lective_year = fields.Many2One('akademy_configuration.lective.year', 
-        'Ano letivo', required=True, ondelete="RESTRICT")
+        'Lective year', required=True, ondelete="RESTRICT")
      
     @classmethod
     def __setup__(cls):
@@ -231,16 +217,9 @@ class ApplicationsResult(ModelSQL, ModelView):
         table = cls.__table__()
         cls._sql_constraints = [
             ('key', Unique(table, table.application, table.application_criteria),
-            u'A candidatura já foi avaliada.')
+            u'The application has already been evaluated.')
         ]     
         cls._order = [('application.candidate.party', 'ASC')] 
-
-    '''
-    @classmethod
-    def delete(cls, applications_result):    
-        if len(applications_result) > 0:            
-            raise UserError("Não foi possível eliminar o resultado da candidatura.")
-    '''
     
     def get_rec_name(self, name):
         return self.application.rec_name
@@ -254,64 +233,64 @@ class StudentTransfer(ModelSQL, ModelView):
     'Student - Transfer'
     __name__ = 'akademy_matriculation.student.transfer'
 
-    description = fields.Text('Descrição')
+    description = fields.Text('Description')
     internal = fields.Boolean(
-        'Interna',
+        'Internal',
         states={ 
             'invisible': Bool(Eval('external')), 
             'required': Not(Bool(Eval('external')))
         }, depends=['external'],
-        help="Saindo da instituição.")
+        help="Leaving the institution.")
     external = fields.Boolean(
-        'Externa',
+        'External',
         states={
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, depends=['internal'],
-        help="Vindo de outra instituição.")
+        help="Coming from another institution.")
     lective_year = fields.Many2One(
-		'akademy_configuration.lective.year', 'Ano letivo', 
+		'akademy_configuration.lective.year', 'Lective year', 
         states={ 
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, depends=['internal'], ondelete="RESTRICT",
-        help="Nome do ano letivo.")
+        help="Name of the school year.")
     academic_level = fields.Many2One(
-		'akademy_configuration.academic.level', 'Nível acadêmico', 
+		'akademy_configuration.academic.level', 'Academic level', 
         states={ 
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, depends=['internal'], ondelete="RESTRICT",
-        help="Nome da nível acadêmico.")
+        help="Name of academic level.")
     area = fields.Many2One(
-		'akademy_configuration.area', 'Área', 
+		'akademy_configuration.area', 'Area', 
         states={ 
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, ondelete="RESTRICT",
 		domain=[('academic_level', '=', Eval('academic_level', -1))], 
-		depends=['academic_level', 'internal'], help="Nome da área.")
+		depends=['academic_level', 'internal'], help="Area name.")
     course = fields.Many2One(
-		'akademy_configuration.course', 'Curso', 
+		'akademy_configuration.course', 'Course', 
         states={ 
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, ondelete="RESTRICT",
 		domain=[('area', '=', Eval('area', -1))],
-		depends=['area', 'internal'], help="Nome da curso.")
+		depends=['area', 'internal'], help="Course name.")
     course_classe = fields.Many2One(
-		'akademy_configuration.course.classe', 'Classe', 
+		'akademy_configuration.course.classe', 'Year level', 
         states={ 
             'invisible': Bool(Eval('internal')), 
             'required': Not(Bool(Eval('internal')))
         }, ondelete="RESTRICT",
         domain=[('course', '=', Eval('course', -1))],
-		depends=['course', 'internal'], help="Nome da classe.")
+		depends=['course', 'internal'], help="Year level name.")
     student = fields.Many2One('company.student', 
-        'Discente', required=True, ondelete="RESTRICT")
+        'Student', required=True, ondelete="RESTRICT")
     student_transfer_discipline = fields.One2Many(
 		'akademy_matriculation.student.transfer.discipline', 
-        'student_transfer', 'Disciplina')
+        'student_transfer', 'Discipline')
     
     @classmethod
     def __setup__(cls):
@@ -320,48 +299,8 @@ class StudentTransfer(ModelSQL, ModelView):
         cls._sql_constraints = [
             ('key',
             Unique(table, table.lective_year, table.academic_level, table.course, table.course_classe, table.student),
-            u'Não foi possível cadastrar a transferência, por favor verifique se o discente já se encontra com uma transferência com estes dados.')
+            u'It was not possible to register the transfer, please check if the student already has a transfer with these details.')
         ]
-
-    @classmethod
-    def create(cls, vlist):
-        vlist = [x.copy() for x in vlist]
-        for values in vlist:
-            records = super(StudentTransfer, cls).create(vlist)
-            if records:
-                if values.get('internal'):                    
-                    Student = Pool().get('company.student')
-                    StudentTransferDiscipline = Pool().get('akademy_matriculation.student.transfer.discipline')
-                    student = Student(values['student'])
-                    classe_students = student.classe_student
-
-                    for record in records:
-                        for classe_student in classe_students:
-
-                            if len(classe_student.historic_grades) > 0:
-                                for historic_grade in classe_student.historic_grades:                                    
-                                    student_transfer_discipline = StudentTransferDiscipline(
-                                        average = historic_grade.average,
-                                        student_transfer = record.id,
-                                        discipline = historic_grade.studyplan_discipline.discipline,
-                                        course = historic_grade.classes.studyplan.course.id, #record.student.course.id,#
-                                        course_classe = historic_grade.classes.studyplan.classe
-                                    )
-                                    student_transfer_discipline.save()
-                            else:    
-                                for classe_student_discipline in classe_student.classe_student_discipline:                                                                         
-                                    student_transfer_discipline = StudentTransferDiscipline(
-                                        average = 0,
-                                        student_transfer = record.id,
-                                        discipline = classe_student_discipline.studyplan_discipline.discipline,
-                                        course = classe_student.classes.studyplan.course.id, #record.student.course.id,#
-                                        course_classe = classe_student.classes.studyplan.classe
-                                    )
-                                    student_transfer_discipline.save()
-
-                return records
-            else:
-                raise UserError("Não foi possível associar a(s) disciplina(s) ao discente.")
 
     def get_rec_name(self, name):
         t1 = '%s' % \
@@ -375,16 +314,16 @@ class StudentTransferDiscipline(ModelSQL, ModelView):
 
     course = fields.Function(
 		fields.Integer(
-			'Curso',
+			'Course',
 		), 'on_change_with_course')
-    average = fields.Numeric('Média', digits=(2,1), required=True) 
+    average = fields.Numeric('Average', digits=(2,1), required=True) 
     student_transfer = fields.Many2One('akademy_matriculation.student.transfer', 
-        'Discente', required=True, ondelete="RESTRICT")
+        'Student', required=True, ondelete="RESTRICT")
     discipline = fields.Many2One('akademy_configuration.discipline', 
-        'Disciplina', required=True, ondelete="RESTRICT")   
-    course_classe = fields.Many2One('akademy_configuration.course.classe', 'Classe', 
+        'Discipline', required=True, ondelete="RESTRICT")   
+    course_classe = fields.Many2One('akademy_configuration.course.classe', 'Year level', 
         required=True, domain=[('course.id', '=', Eval('course', -1))],
-        depends=['course'], ondelete="RESTRICT", help="Nome da classe.")
+        depends=['course'], ondelete="RESTRICT", help="Year level name.")
     
     @classmethod
     def __setup__(cls):
@@ -393,7 +332,7 @@ class StudentTransferDiscipline(ModelSQL, ModelView):
         cls._sql_constraints = [
             ('uniq_classes',
             Unique(table, table.student_transfer, table.discipline, table.course_classe),
-            u'Não foi possível associar está disciplina ao discente, por favor verifique se o mesmo já têm esta disciplina associada.')            
+            u'It was not possible to associate this subject with the student, please check if they already have this subject associated.')            
         ]
 
     def get_rec_name(self, name):
@@ -415,31 +354,31 @@ class MatriculationCreateWzardStart(ModelView):
     __name__ = 'akademy_matriculation.wizmatriculation.create.start'
 
     is_candidate = fields.Boolean(
-        'Candidato', 
+        'Candidate', 
         states={
             'invisible':  Bool(Eval('is_transferred')) | Bool(Eval('is_student'))
         }, depends=['is_transferred'], 
-        help="Matrícula para candidato.")
+        help="Registration for candidate.")
     is_transferred = fields.Boolean(
-        'Transferido', 
+        'Transferred', 
         states={
             'invisible':  Bool(Eval('is_candidate')) | Bool(Eval('is_student'))
         }, depends=['is_candidate'], 
-        help="Matrícula para discente transferido.")
+        help="Registration for transferred students.")
     applications = fields.Many2One(
-        'akademy_matriculation.applications.result', 'Candidato',
+        'akademy_matriculation.applications.result', 'Application',
         states={
             'invisible': Not(Bool(Eval('is_candidate'))), 
             'required': Bool(Eval('is_candidate'))
-        }, domain=[('result', '=', 'Admitido')], 
-        help="Caro utilizador será feita a matrícula do candidato.")
+        }, domain=[('result', '=', 'admitted')], 
+        help="Dear user, the candidate will be registered.")
     transferred = fields.Many2One(
-        'akademy_matriculation.student.transfer', 'Transferido',
+        'akademy_matriculation.student.transfer', 'Transferred',
         states={
             'invisible': Not(Bool(Eval('is_transferred'))), 
             'required': Bool(Eval('is_transferred'))
         }, domain=[('external', '=', True)],
-        help="Caro utilizador será feita a matrícula do discente transfêrido.")
+        help="Dear user, the transfer student will be enrolled.")
            
         
 class MatriculationCreateWzard(Wizard):
@@ -450,8 +389,8 @@ class MatriculationCreateWzard(Wizard):
     start = StateView(
         'akademy_matriculation.wizmatriculation.create.start', 
         "akademy_matriculation.act_matriculation_wizard_from", [
-            Button(string=u'Cancelar', state='end', icon='tryton-cancel'),
-            Button(string=u'Matricular', state='matriculation', icon='tryton-save')
+            Button(string=u'Cancel', state='end', icon='tryton-cancel'),
+            Button(string=u'Enroll', state='matriculation', icon='tryton-save')
         ]
     )
     matriculation = StateTransition()
@@ -467,10 +406,11 @@ class MatriculationCreateWzard(Wizard):
     @classmethod
     def student_candidate(cls, application):
         NewStudent = Pool().get('company.student')        
-        MatriculationState = Pool().get('akademy_configuration.matriculation.state')
+        #MatriculationState = Pool().get('akademy_configuration.matriculation.state')
         
         if len(application.candidate.party.student) > 0:
-            MatriculationCreateWzard.candidate_matriculation(application, application.candidate.party.student[0], 'Candidato(a)')          
+            MatriculationCreateWzard.candidate_matriculation(
+                application, application.candidate.party.student[0], 'candidate')          
         else:
             student_matriculatio = NewStudent.search([
                 ('party','=',application.candidate.party),
@@ -479,30 +419,28 @@ class MatriculationCreateWzard(Wizard):
                 ('course','=',application.course)
                 ])
             
-            if len(student_matriculatio) <= 0:
-                state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1),
-                matriculation_state = state[0]                
+            if len(student_matriculatio) <= 0:   
+                state = 'enrolled'             
                 Matriculation = NewStudent(
-                    state = matriculation_state[0],
+                    state = state, #matriculation_state[0],
                     course = application.course,
-                    area = studapplicationent.area,
+                    area = application.area,
                     academic_level = application.academic_level,
                     start_date = date.today(),
                     party = application.candidate.party,
                 )
                 Matriculation.save()
 
-                MatriculationCreateWzard.candidate_matriculation(application, Matriculation, 'Candidato(a)')        
+                MatriculationCreateWzard.candidate_matriculation(
+                    application, Matriculation, 'candidate')        
         
     @classmethod
-    def candidate_matriculation(cls, application, matriculation, type):
+    def candidate_matriculation(cls, application, matriculation, mt_type):
         ClasseStudent = Pool().get('akademy_classe.classe.student')
         Classes = Pool().get('akademy_classe.classes')
-        MatriculationState = Pool().get('akademy_configuration.matriculation.state')
-        MatriculationType = Pool().get('akademy_configuration.matriculation.type')        
         
         if len(application.area.studyplan) <= 0:
-            raise UserError("Infelizmente, não é possível matricular o discente, pois a área ainda não possui planos de estudos.")
+            raise UserError("Unfortunately, it is not possible to enroll the student, as the area does not yet have study plans.")
 
         get_classes = Classes.search([
             ('lective_year', '=', application.lective_year),
@@ -510,30 +448,30 @@ class MatriculationCreateWzard(Wizard):
             ('studyplan.course', '=', application.course),
             ])
 
-        if len(get_classes) > 0:
-            #if get_classes[0].state == False:            
-            if (get_classes[0].max_student != len(get_classes[0].classe_student)):
-                matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                matriculation_type = MatriculationType.search([('name', '=', type)], limit=1)                                                
+        if len(get_classes) > 0:           
+            if (get_classes[0].max_student != len(get_classes[0].classe_student)):  
+                matriculation_state = 'enrolled'
                 MatriculationStudent = MatriculationCreateWzard.create_student_matriculation(
-                    application, ClasseStudent, matriculation_state[0], matriculation_type[0], 
+                    application, ClasseStudent, matriculation_state, mt_type, 
                     matriculation, get_classes[0], get_classes[0].classe, 0
                 )
                 
                 if len(application.area.studyplan[0].studyplan_discipline) > 0:
-                    MatriculationCreateWzard.discipline_matriculation(MatriculationStudent, get_classes[0].studyplan.studyplan_discipline) 
+                    MatriculationCreateWzard.discipline_matriculation(
+                        MatriculationStudent, get_classes[0].studyplan.studyplan_discipline) 
 
                 else:
-                    raise UserError("Infelizmente não é possível matricular o discente, porque ja excedeu o limite de vagas disponíveis.")
+                    raise UserError("Unfortunately, it is not possible to enroll the student because the limit of available places has already been exceeded.")
             else:
-                raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
+                raise UserError("It is not possible to enroll the student or candidate because the class is already full.")
         else:
-            raise UserError("Não foi possível efetuar a matrícula do discente ou candidato, porque ainda não existe uma turma criada.")      
+            raise UserError("It was not possible to enroll the student or candidate because a class has not yet been created.")      
     
     @classmethod
     def create_student_matriculation(cls, classe_student, ClasseStudent, matriculation_state, matriculation_type, student, classes, classe, update):   
         if matriculation_state:
-            student_matriculation = ClasseStudent.save_student_matriculation(matriculation_state, matriculation_type, student, classes)
+            student_matriculation = ClasseStudent.save_student_matriculation(
+                matriculation_state, matriculation_type, student, classes)
             MatriculationCreateWzard.update_student_company_state(student, classe, matriculation_state)        
 
         if update:                
@@ -549,8 +487,8 @@ class MatriculationCreateWzard(Wizard):
 
     @classmethod
     def update_student_state(cls, classe_student):
-        MatriculationState = Pool().get('akademy_configuration.matriculation.state')
-        classe_student.state = MatriculationState.search([('name', '=', "Aprovado(a)")])
+        #MatriculationState = Pool().get('akademy_configuration.matriculation.state')
+        classe_student.state = "approved" #MatriculationState.search([('name', '=', "Aprovado(a)")])
         classe_student.save()
 
     @classmethod
@@ -563,17 +501,16 @@ class MatriculationCreateWzard(Wizard):
                     ('classe_student', '=', student), 
                     ('studyplan_discipline', '=', discipline)
                     ])                
-                if len(student_matriculation) <= 0:                                                           
-                    MatriculationState = Pool().get('akademy_configuration.matriculation.state')
-                    DisciplineModality = Pool().get('akademy_configuration.discipline.modality')
-                    discipline_modality = DisciplineModality.search([('name', '=', 'Presencial')], limit=1)
-                    matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)                     
+                if len(student_matriculation) <= 0: 
+                    discipline_modality = 'in_person' 
+                    mt_state = 'enrolled' 
 
-                    ClasseStudentDiscipline.save_student_discipline(student, discipline, matriculation_state[0], discipline_modality[0])                    
+                    ClasseStudentDiscipline.save_student_discipline(
+                        student, discipline, mt_state, discipline_modality)                    
         else:
-            raise UserError("Não é possível associar disciplinas ao discente, pois ele não reprovou em nenhuma das disciplinas frequentadas na turma "+
-                student[0].classes.name+" durante o ano letivo de "+student[0].classes.lective_year.name+
-                " e já está matriculado nessas disciplinas..")
+            raise UserError("It is not possible to assign subjects to the student, as he did not fail any of the subjects taken in the class.  "+
+                student[0].classes.name+" during the school year of "+student[0].classes.lective_year.name+
+                " and is already enrolled in those subjects.")
     
     @classmethod
     def student_transferred(cls, student):  
@@ -602,21 +539,24 @@ class MatriculationCreateWzard(Wizard):
                 else:
                     get_student_transferred_discipline.append(studyplan_discipline)
 
-                #and studyplan_discipline.state.required == True:
-                if studyplan_discipline.state.name == "Obrigatório":
+                if studyplan_discipline.state.required == True:
                     discipline_required.append(studyplan_discipline)
                     
             if len(discipline_required) == len(student_discipline_possitive):                            
                 pass
             else:
-                MatriculationCreateWzard.student_transfer_classe(studyplan, get_student_transferred_discipline, discipline_positive, student_discipline_possitive, student)
+                # Check if the student is enrolled
+                if len(student.student.classe_student) < 1:
+                    MatriculationCreateWzard.student_transfer_classe(
+                        studyplan, get_student_transferred_discipline, 
+                        discipline_positive, student_discipline_possitive, 
+                        student)
 
     @classmethod
     def student_transfer_classe(cls, studyplan, get_student_transferred_discipline, discipline_positive, student_discipline_possitive, student):
         Classes = Pool().get('akademy_classe.classes')
         ClasseStudent = Pool().get('akademy_classe.classe.student')
         Student = Pool().get('company.student')
-        MatriculationState = Pool().get('akademy_configuration.matriculation.state')
         MatriculationType = Pool().get('akademy_configuration.matriculation.type')
 
         for studyplan_discipline in studyplan.studyplan_discipline:
@@ -633,10 +573,9 @@ class MatriculationCreateWzard(Wizard):
             ('classe', '=', classe_matriculation),
             ('studyplan', '=', studyplan)
             ])
-
-        #if get_classes[0].state == False: 
+ 
         if len(student.student.classe_student) > 0:
-            raise UserError("Infelizmente não é possível matricular o discente, porque o discente já está matriculado.")                    
+            raise UserError("Unfortunately, it is not possible to enroll the student because the student is already enrolled.")                    
         else:
             if len(get_classes) > 0:                        
                 get_class_student = ClasseStudent.search(
@@ -647,13 +586,16 @@ class MatriculationCreateWzard(Wizard):
                 ) 
                 
                 if len(get_class_student) > 0:
-                    raise UserError("O discente "+student.student.party.name+" já existe na instituição, por favor verifique a matrícula na "+get_class_student[0].classes.name+".")                        
+                    raise UserError("The student "+student.student.party.name+" already exists in the institution, please verify his enrollment in the "+get_class_student[0].classes.name+".")                        
                 else:
                     if (get_classes[0].max_student != len(get_classes[0].classe_student)):
-                        matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                        matriculation_type = MatriculationType.search([('name', '=', 'Transfêrido(a)')], limit=1)
+                        matriculation_state = 'enrolled'
+                        matriculation_type = 'transfer'
 
-                        MatriculationCreateWzard.create_student_matriculation(student, ClasseStudent, matriculation_state[0], matriculation_type[0], student.student, get_classes[0], get_classes[0].classe, 0)                                                        
+                        MatriculationCreateWzard.create_student_matriculation(
+                            student, ClasseStudent, matriculation_state, 
+                            matriculation_type, student.student, get_classes[0], 
+                            get_classes[0].classe, 0)                                                        
                         student_matriculation = Student.search([
                             ('party','=',student.student.party),
                             ('academic_level','=',student.student.academic_level),
@@ -662,18 +604,16 @@ class MatriculationCreateWzard(Wizard):
                             ])
                         
                         if len(student_matriculation) > 0:
-                            state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)
-                            student_matriculation[0].state = state[0]
+                            student_matriculation[0].state = matriculation_state
                             student_matriculation[0].save()
                                                     
-                        MatriculationCreateWzard.student_transferred_discipline(student.student.classe_student, get_student_transferred_discipline, get_classes[0].studyplan)
+                        MatriculationCreateWzard.student_transferred_discipline(
+                            student.student.classe_student, 
+                            get_student_transferred_discipline, get_classes[0].studyplan)
                     else:
-                        raise UserError("Infelizmente não é possível matricular o discente, porque ja excedeu o limite de vagas disponíveis.")
+                        raise UserError("Unfortunately, it is not possible to enroll the student because the limit of available places has already been exceeded.")
             else:
-                raise UserError("Infelizmente não é possível matricular o discente, porque não foi encontrado um encontrado uma turma disponivel.")           
-    
-        #else:
-        #    raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
+                raise UserError("Unfortunately, it is not possible to enroll the student because no available class was found.")           
     
     @classmethod
     def student_transferred_discipline(cls, student, discipline_negative, studyplan):        
@@ -681,9 +621,9 @@ class MatriculationCreateWzard(Wizard):
             if len(discipline_negative) > 0:
                 MatriculationCreateWzard.association_discipline(student, discipline_negative)
             else:
-                raise UserError("Infelizmente não é possível associar disciplinas ao discente, porque não há negativas.")        
+                raise UserError("Unfortunately, it's not possible to assign subjects to a student because there are no failing grades.")        
         else:
-            raise UserError("Infelizmente não é possível associar disciplinas ao discente, porque não foi encontrado um plano de estudo compatível com o seu percurso acadêmico.")
+            raise UserError("Unfortunately, it is not possible to assign courses to the student because a study plan compatible with their academic background was not found.")
 
     @classmethod
     def association_discipline(cls, student, studyplan_discipline):
@@ -694,18 +634,17 @@ class MatriculationCreateWzard(Wizard):
                     ('classe_student', '=', student[0]), 
                     ('studyplan_discipline', '=', discipline)
                     ])                
-                if len(student_matriculation) <= 0:            
-                    MatriculationState = Pool().get('akademy_configuration.matriculation.state')
-                    DisciplineModality = Pool().get('akademy_configuration.discipline.modality')
-                    discipline_modality = DisciplineModality.search([('name', '=', 'Presencial')], limit=1)
-                    matriculation_state = MatriculationState.search([('name', '=', 'Matrículado(a)')], limit=1)                     
+                if len(student_matriculation) <= 0:  
+                    matriculation_state = 'enrolled'
+                    discipline_modality = 'all'                    
            
-                    ClasseStudentDiscipline.save_student_discipline(student[0], discipline, matriculation_state[0], discipline_modality[0])
+                    ClasseStudentDiscipline.save_student_discipline(
+                        student[0], discipline, matriculation_state, discipline_modality)
                     
         else:
-            raise UserError("Não é possível associar disciplinas ao discente, pois ele não reprovou em nenhuma disciplina na turma "+
-                student[0].classes.name+" durante o ano letivo de "+student[0].classes.lective_year.name+
-                " e já está matriculado nessas disciplinas.")
+            raise UserError("It is not possible to assign subjects to the student, as he did not fail any subject in the class. "+
+                student[0].classes.name+" during the school year of "+student[0].classes.lective_year.name+
+                " and is already enrolled in those subjects.")
  
 
 class AssociationDisciplineCreateWzardStart(ModelView):
@@ -713,8 +652,8 @@ class AssociationDisciplineCreateWzardStart(ModelView):
     __name__ = 'akademy_matriculation.wizassociatiodiscipline.create.start'
 
     classes = fields.Many2One(
-        'akademy_classe.classes', 'Turma', required=True,
-        help="Caro utilizador será feita uma associação entre os discentes desta turma e as displinas existentes no plano de estudo."
+        'akademy_classe.classes', 'Class', required=True,
+        help="An association will be made between the students in this class and the subjects in the study plan."
     )
 
 
@@ -726,22 +665,19 @@ class AssociationDisciplineCreateWzard(Wizard):
     start = StateView(
         'akademy_matriculation.wizassociatiodiscipline.create.start', 
         "akademy_matriculation.act_associationdiscipline_wizard_from", [
-            Button(string=u'Cancelar', state='end', icon='tryton-cancel'),
-            Button(string=u'Associar', state='association', icon='tryton-save')
+            Button(string=u'Cancel', state='end', icon='tryton-cancel'),
+            Button(string=u'Associate', state='association', icon='tryton-save')
         ]
     )
     association = StateTransition()
 
     def transition_association(self):
-        StudentDiscipline = Pool().get('akademy_classe.classe.student.discipline')
-        DisciplineModality = Pool().get('akademy_configuration.discipline.modality')
-
-        state_student = ['Aguardando', 'Suspenso(a)', 'Anulada', 'Transfêrido(a)', 'Reprovado(a)']
+        StudentDiscipline = Pool().get('akademy_classe.classe.student.discipline')        
+        state_student = ['waiting', 'suspended', 'cancelled', 'transferred', 'failed']
         list_matriculation = 0
 
-        #if self.start.classes.state == False:
         for classe_student in self.start.classes.classe_student:
-            if classe_student.state.name not in state_student:
+            if classe_student.state not in state_student:
                 for studyplan_discipline in self.start.classes.studyplan.studyplan_discipline:
                     matriculaton_discipline = StudentDiscipline.search(
                         [('classe_student', '=', classe_student), ('studyplan_discipline', '=', studyplan_discipline)]
@@ -749,22 +685,19 @@ class AssociationDisciplineCreateWzard(Wizard):
                     
                     if (len(matriculaton_discipline) < 1):
                         list_matriculation = 1
-                        discipline_modality = DisciplineModality.search([('name', '=', "Presencial")], limit=1)
+                        discipline_modality = 'all'
 
                         matriculaton = StudentDiscipline(
                             classe_student = classe_student,
                             studyplan_discipline = studyplan_discipline,
                             state = classe_student.state,
-                            modality = discipline_modality[0]
+                            modality = discipline_modality
                         )
                         matriculaton.save()
 
         if list_matriculation == 0:
-            raise UserError("Não foi possível associar disciplinas aos discentes desta turma, por favor verificar se a turma tem discentes ou se todas as disciplinas já foram associadas.")		
-
-        #else:
-        #    raise UserError("Não é possível efetuar a matrícula do discente ou candidato, porque a turma já se encontra fechada.")
-                    
+            raise UserError("We were unable to associate subjects with the students in this class. Please check if the class has any students or if all subjects have already been associated.")		
+          
         return 'end'  
 
 
@@ -773,8 +706,8 @@ class ApplicationAvaliationCreateWzardStart(ModelView):
     __name__ = 'akademy_matriculation.wizapplication_avaliation.create.start'
 
     applications_criteria = fields.Many2One(
-        'akademy_configuration.application.criteria', 'Critério de admissão',       
-        required=True, help="Caro utilizador escolha o critério de admissão.")
+        'akademy_configuration.application.criteria', 'Admission criteria',       
+        required=True, help="Choose your admission criteria.")
 
 
 class ApplicationAvaliationCreateWzard(Wizard):
@@ -785,8 +718,8 @@ class ApplicationAvaliationCreateWzard(Wizard):
     start = StateView(
         'akademy_matriculation.wizapplication_avaliation.create.start',
         "akademy_matriculation.act_application_avaliation_wizard_from", [
-            Button(string=u'Cancelar', state='end', icon='tryton-cancel'),
-            Button(string=u'Avaliar', state='application_avaliation', icon='tryton-save')
+            Button(string=u'Cancel', state='end', icon='tryton-cancel'),
+            Button(string=u'Evaluate', state='application_avaliation', icon='tryton-save')
         ]
     )
     application_avaliation = StateTransition()
@@ -806,12 +739,7 @@ class ApplicationAvaliationCreateWzard(Wizard):
         
         if self.start.applications_criteria.phase.start <= date.today() <= self.start.applications_criteria.phase.end:
             if len(candidate_application) >= 1:
-                #application_sorted = []
-                #for value in candidate_application:
-                #    application_sorted.append(value)                
-
-                #application_sort = sorted(application_sorted, key=lambda application_sort: [application_sort.age, application_sort.candidate.average])           
-
+                
                 order = [('age', 'ASC'), ('candidate.average', 'ASC')]
                 application_sort = sort(candidate_application, order)
                 
@@ -821,7 +749,7 @@ class ApplicationAvaliationCreateWzard(Wizard):
                     
                     if len(ApplicationCriteria) > 0:
                         Result = ApplicationResult.search([
-                            ('result', '=', 'Admitido'), 
+                            ('result', '=', 'admitted'), 
                             ('application_criteria', '=', ApplicationCriteria[0]),
                             ('lective_year', '=', element.lective_year)
                             ]) 
@@ -830,22 +758,22 @@ class ApplicationAvaliationCreateWzard(Wizard):
                         if len(ApplicationCriteria) >= 1:
                             if ApplicationCriteria[0].student_limit >= limit: 
                                 if len(element.result) <= 1:
-                                    Applications.application_admission_avaliation(ApplicationCriteria, element, ApplicationResult, element.lective_year)
+                                    Applications.application_admission_avaliation(
+                                        ApplicationCriteria, element, 
+                                        ApplicationResult, element.lective_year)
                                 else:
-                                    raise UserError("Não foi possível avaliar a candidatura do candidato(a) "+element.candidate.party.name+
-                                                    ", por favor verificar se já existe uma candidatura avaliada para o mesmo.")
+                                    raise UserError("It was not possible to evaluate the candidate's application. "+element.candidate.party.name+
+                                                    ", please check if there is already a reviewed application for this.")
                             else:
-                                raise UserError("Não foi possível avaliar a candidatura, porque já excedeu o limit estabelecido pela instituição.")
+                                raise UserError("It was not possible to evaluate the application because it has already exceeded the limit established by the institution.")
                         else:
-                            raise UserError("Não foi possível avaliar a candidatura. Por favor, verifique se existe pelo menos um critério de admissão na fase "+
-                                            element.phase.name+", para o curso de "+element.course.name+".\nOu se o candidato(a) "+element.candidate.party.name+
-                                            ", já possui uma candidatura para neste curso e neste ano letivo.")
+                            raise UserError("We were unable to evaluate your application. Please check if you meet at least one eligibility criterion in this phase "+
+                                            element.phase.name+", for the course of "+element.course.name+".\nOr if the candidate "+element.candidate.party.name+
+                                            ", You are already enrolled in this course and this academic year.")
                     else:
-                        raise UserError("Não foi possível avaliar a candidatura, porque não foi possível encontrar um critério de admissão,"+
-                                        " para a fase "+self.start.applications_criteria.phase.name)
+                        raise UserError("The application could not be evaluated because no admission criteria could be found,"+
+                                        " for the phase "+self.start.applications_criteria.phase.name)
         else:
-            raise UserError("Não foi possível avaliar a candidatura, porque já se encontra fora do período de avaliação de candidatura da fase "+
-                            self.start.applications_criteria.phase.name)
-    
-        return 'end'
-        
+            raise UserError("It was not possible to evaluate the application because it is no longer within the application evaluation period of this phase. "+
+                            self.start.applications_criteria.phase.name)    
+        return 'end'        

@@ -7,6 +7,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="discipline"/> 
     <field name="course_classe"/> 
     <field name="average">
-        <suffix name="average" string="Valores"/>
+        <suffix name="average" string="Average"/>
     </field> 
 </tree>

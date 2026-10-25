@@ -12,12 +12,12 @@ this repository contains the full copyright notices and license terms. -->
     <field name="course_classe"/>
     <field name="phase"/>
     <field name="age">
-        <suffix name="age" string="Ano(s)"/>
+        <suffix name="age" string="Year(s)"/>
     </field>
     <field name="average">
-        <suffix name="average" string="Valores"/>
+        <suffix name="average" string="Average"/>
     </field>
     <field name="student_limit">
-        <suffix name="student_limit" string="Vagas"/>
+        <suffix name="student_limit" string="Limit"/>
     </field>
 </tree>

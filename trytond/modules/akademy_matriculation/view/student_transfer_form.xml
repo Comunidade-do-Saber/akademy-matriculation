@@ -24,10 +24,10 @@ this repository contains the full copyright notices and license terms. -->
         <field name="course_classe"/> 
     </group>  
     <notebook colspan="4">
-        <page string="Descrição" id="description">
+        <page string="Description" id="description">
             <field name="description" widget="richtext"/>
         </page>
-        <page string="Disciplinas" id="student_transfer_discipline">
+        <page string="Disciplines" id="student_transfer_discipline">
             <field name="student_transfer_discipline" mode="tree,form" colspan="4" 
                 view_ids="akademy_matriculation.student_transfer_discipline_view_list,akademy_matriculation.student_transfer_discipline_view_form"/>
         </page>

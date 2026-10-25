@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2022-05-07T21:25:29.452132099</meta:creation-date><meta:editing-cycles>200</meta:editing-cycles><meta:editing-duration>P1DT3H38M49S</meta:editing-duration><dc:date>2025-12-01T20:13:54.303642046</dc:date><meta:generator>LibreOffice/24.2.7.2$Linux_X86_64 LibreOffice_project/420$Build-2</meta:generator><meta:document-statistic meta:table-count="3" meta:image-count="1" meta:object-count="0" meta:page-count="1" meta:paragraph-count="26" meta:word-count="57" meta:character-count="645" meta:non-whitespace-character-count="610"/></office:meta>
+ <office:meta><meta:creation-date>2022-05-07T21:25:29.452132099</meta:creation-date><meta:editing-cycles>202</meta:editing-cycles><meta:editing-duration>P1DT3H41M23S</meta:editing-duration><dc:date>2026-05-28T13:20:28.356369611</dc:date><meta:generator>LibreOffice/24.2.7.2$Linux_X86_64 LibreOffice_project/420$Build-2</meta:generator><meta:document-statistic meta:table-count="3" meta:image-count="1" meta:object-count="0" meta:page-count="1" meta:paragraph-count="27" meta:word-count="58" meta:character-count="646" meta:non-whitespace-character-count="611"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">2879</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">30820</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">18311</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">36133</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">24428</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">6909</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">3568</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">21338</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">14921</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">30819</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">18309</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">2879</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">36132</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">27305</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -138,7 +138,7 @@
    <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
    <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
    <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">15040937</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">15206846</config:config-item>
    <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MsWordCompMinLineHeightByFly" config:type="boolean">false</config:config-item>
@@ -384,150 +384,187 @@
    <style:table-column-properties style:column-width="11.007cm"/>
   </style:style>
   <style:style style:name="Tabela3.A1" style:family="table-cell">
-   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="none" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Tabela3.B1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabela3.A2" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabela3.B2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:color="#4f81bd" loext:opacity="100%" style:font-name="Times New Roman" fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="00d966b2" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt"/>
   </style:style>
   <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="end" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00e809be" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:color="#4f81bd" loext:opacity="100%" style:font-name="Times New Roman" fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="00d966b2" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Footer">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Footer">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="001f7d39" officeooo:paragraph-rsid="00dcc665"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
   <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="0018252d" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="00b84833" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="0018252d" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="00b84833" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="100%" fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="003e0367" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="150%" fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="003e0367" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="150%" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="003e0367" officeooo:paragraph-rsid="00e76ed8" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="003e0367" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="3.752cm" fo:margin-right="0cm" fo:line-height="115%" fo:text-align="center" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="001f7d39" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00dcc665"/>
-  </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665"/>
-  </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:line-height="115%" fo:text-align="end" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665"/>
   </style:style>
   <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="normal" officeooo:rsid="0018252d" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665"/>
   </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00dcc665"/>
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="end" style:justify-single-word="false"/>
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00dcc665"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:language="pt" fo:country="BR" fo:font-weight="normal" officeooo:rsid="0018252d" officeooo:paragraph-rsid="00dcc665" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00dcc665"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00de827c"/>
   </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00dfc028"/>
   </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:language="pt" fo:country="BR" fo:font-weight="normal" officeooo:rsid="0018252d" officeooo:paragraph-rsid="00dcc665" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Footer">
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Footer">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" fo:language="pt" fo:country="BR" fo:font-weight="normal" officeooo:rsid="003e0367" officeooo:paragraph-rsid="00dcc665" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Footer">
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Footer">
    <style:paragraph-properties fo:line-height="115%" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="12pt" officeooo:paragraph-rsid="00dcc665" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="2pt" fo:language="pt" fo:country="BR" officeooo:paragraph-rsid="00dcc665" style:font-size-asian="1.75pt" style:font-size-complex="2pt"/>
   </style:style>
-  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="end" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Liberation Sans" fo:font-size="16pt" fo:language="pt" fo:country="BR" fo:font-weight="bold" officeooo:rsid="00d15aa3" officeooo:paragraph-rsid="00dcc665" style:font-name-asian="Noto Sans CJK SC" style:font-size-asian="16.1000003814697pt" style:font-weight-asian="bold" style:font-name-complex="Lohit Devanagari1" style:font-size-complex="16.1000003814697pt" style:font-weight-complex="bold"/>
   </style:style>
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties fo:color="#4f81bd" loext:opacity="100%" style:font-name="Times New Roman" fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="00d966b2" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt"/>
+  </style:style>
+  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="150%" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="12pt" fo:language="pt" fo:country="BR" fo:font-weight="normal" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00e76ed8" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="end" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" fo:language="pt" fo:country="BR" officeooo:rsid="001aff17" officeooo:paragraph-rsid="00e809be" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001ef013"/>
-  </style:style>
-  <style:style style:name="T2" style:family="text">
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001f7d39"/>
-  </style:style>
-  <style:style style:name="T3" style:family="text">
-   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="002ff9a2"/>
-  </style:style>
-  <style:style style:name="T4" style:family="text">
-   <style:text-properties officeooo:rsid="0018252d"/>
-  </style:style>
-  <style:style style:name="T5" style:family="text">
-   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="T6" style:family="text">
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="0018252d" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="T7" style:family="text">
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003e0367" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="T8" style:family="text">
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="009df438" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="T9" style:family="text">
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00aa21a8" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="T10" style:family="text">
    <style:text-properties fo:font-weight="bold" officeooo:rsid="009601ae" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="T11" style:family="text">
+  <style:style style:name="T2" style:family="text">
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003e0367" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
    <style:text-properties fo:font-weight="bold" officeooo:rsid="00c174be" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
+  <style:style style:name="T4" style:family="text">
+   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T5" style:family="text">
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001ef013"/>
+  </style:style>
+  <style:style style:name="T6" style:family="text">
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="001f7d39"/>
+  </style:style>
+  <style:style style:name="T7" style:family="text">
+   <style:text-properties fo:language="pt" fo:country="BR" officeooo:rsid="002ff9a2"/>
+  </style:style>
+  <style:style style:name="T8" style:family="text">
+   <style:text-properties officeooo:rsid="0018252d"/>
+  </style:style>
+  <style:style style:name="T9" style:family="text">
+   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T10" style:family="text">
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="0018252d" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T11" style:family="text">
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003e0367" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
   <style:style style:name="T12" style:family="text">
-   <style:text-properties officeooo:rsid="007adc84"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="009df438" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T13" style:family="text">
-   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001aff17" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00aa21a8" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T14" style:family="text">
-   <style:text-properties fo:font-size="12pt" officeooo:rsid="009df438" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="009601ae" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T15" style:family="text">
-   <style:text-properties fo:font-size="12pt" officeooo:rsid="0018252d" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00c174be" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T16" style:family="text">
-   <style:text-properties officeooo:rsid="009fb1a8"/>
+   <style:text-properties officeooo:rsid="007adc84"/>
   </style:style>
   <style:style style:name="T17" style:family="text">
-   <style:text-properties officeooo:rsid="00aaea72"/>
+   <style:text-properties fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001aff17" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T18" style:family="text">
+   <style:text-properties fo:font-size="12pt" officeooo:rsid="009df438" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="T19" style:family="text">
+   <style:text-properties fo:font-size="12pt" officeooo:rsid="0018252d" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="T20" style:family="text">
+   <style:text-properties officeooo:rsid="009fb1a8"/>
+  </style:style>
+  <style:style style:name="T21" style:family="text">
+   <style:text-properties officeooo:rsid="00aaea72"/>
+  </style:style>
+  <style:style style:name="T22" style:family="text">
    <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Graphics">
@@ -540,7 +577,9 @@
    <style:header-style>
     <style:header-footer-properties fo:min-height="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-bottom="0.499cm"/>
    </style:header-style>
-   <style:footer-style/>
+   <style:footer-style>
+    <style:header-footer-properties fo:min-height="0cm" fo:margin-top="0.499cm" fo:background-color="transparent" draw:fill="none"/>
+   </style:footer-style>
   </style:page-layout>
   <style:page-layout style:name="pm2">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="20" style:layout-grid-base-height="0.706cm" style:layout-grid-ruby-height="0.353cm" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="false" style:layout-grid-display="false" style:footnote-max-height="0cm" loext:margin-gutter="0cm">
@@ -558,6 +597,9 @@
    <style:header>
     <text:p text:style-name="P1"/>
    </style:header>
+   <style:footer>
+    <text:p text:style-name="P2"><text:span text:style-name="T1">Documento </text:span><text:bookmark-start text:name="__DdeLink__1831_38469859251"/><text:span text:style-name="T1">g</text:span><text:bookmark-end text:name="__DdeLink__1831_38469859251"/><text:span text:style-name="T2">erado </text:span><text:span text:style-name="T3">a</text:span><text:span text:style-name="T4">:</text:span> <text:placeholder text:placeholder-type="text" text:description="Descrição">&lt;create_date&gt;</text:placeholder><text:s/><text:placeholder text:placeholder-type="text">&lt;datetime.datetime.now().strftime(&apos;%H:%M:%S&apos;)&gt;</text:placeholder></text:p>
+   </style:footer>
   </style:master-page>
   <style:master-page style:name="Index" style:page-layout-name="pm2" draw:style-name="dp1"/>
  </office:master-styles>
@@ -571,13 +613,13 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
    </text:sequence-decls>
-   <text:p text:style-name="P18"><text:bookmark-start text:name="__DdeLink__6415_4045591709"/><text:bookmark-start text:name="__DdeLink__24771_4045591709"/><text:placeholder text:placeholder-type="text">&lt;for each=&quot;appcriteria in (criteria or &apos;&apos;)&quot;&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__6415_4045591709"/><text:bookmark-end text:name="__DdeLink__24771_4045591709"/><text:bookmark text:name="__DdeLink__67027_218582475 Copy 1 Copy 4 Copy 1"/></text:p>
+   <text:p text:style-name="P20"><text:bookmark-start text:name="__DdeLink__6415_4045591709"/><text:bookmark-start text:name="__DdeLink__24771_4045591709"/><text:placeholder text:placeholder-type="text">&lt;for each=&quot;appcriteria in (criteria or &apos;&apos;)&quot;&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__6415_4045591709"/><text:bookmark-end text:name="__DdeLink__24771_4045591709"/><text:bookmark text:name="__DdeLink__67027_218582475 Copy 1 Copy 4 Copy 1"/></text:p>
    <table:table table:name="Table10" table:style-name="Table10">
     <table:table-column table:style-name="Table10.A"/>
     <table:table-column table:style-name="Table10.B"/>
     <table:table-row table:style-name="Table10.1">
      <table:table-cell table:style-name="Table10.A1" office:value-type="string">
-      <text:p text:style-name="P16"><draw:frame draw:style-name="fr1" draw:name="Image2" text:anchor-type="char" svg:x="0.908cm" svg:y="0.023cm" svg:width="6.488cm" svg:height="2.907cm" draw:z-index="0"><draw:image draw:mime-type="image/jpeg">
+      <text:p text:style-name="P18"><draw:frame draw:style-name="fr1" draw:name="Image2" text:anchor-type="char" svg:x="0.908cm" svg:y="0.023cm" svg:width="6.488cm" svg:height="2.907cm" draw:z-index="0"><draw:image draw:mime-type="image/jpeg">
          <office:binary-data>/9j/4AAQSkZJRgABAQEBLAEsAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRy
           UkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAAAA
           9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -6825,21 +6867,21 @@
          </office:binary-data>
         </draw:image>
        </draw:frame></text:p>
-      <text:p text:style-name="P16"/>
+      <text:p text:style-name="P18"/>
      </table:table-cell>
      <table:table-cell table:style-name="Table10.B1" office:value-type="string">
-      <text:p text:style-name="P22"/>
-      <text:p text:style-name="P23">CRITÉRIO DE ADMISSÃO</text:p>
+      <text:p text:style-name="P24"/>
+      <text:p text:style-name="P25">CRITÉRIO DE ADMISSÃO</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P19"><text:bookmark text:name="__DdeLink__14263_798074146"/></text:p>
-   <text:p text:style-name="P17"><text:bookmark text:name="__DdeLink__67027_218582475 Copy 1 Copy 4"/></text:p>
+   <text:p text:style-name="P21"><text:bookmark text:name="__DdeLink__14263_798074146"/></text:p>
+   <text:p text:style-name="P19"><text:bookmark text:name="__DdeLink__67027_218582475 Copy 1 Copy 4"/></text:p>
    <table:table table:name="Tabela2" table:style-name="Tabela2">
     <table:table-column table:style-name="Tabela2.A"/>
     <table:table-row table:style-name="Tabela2.1">
      <table:table-cell table:style-name="Tabela2.A1" office:value-type="string">
-      <text:p text:style-name="P4">DADOS D<text:span text:style-name="T12">O </text:span><text:span text:style-name="T16">CRITÉRIO DE ADMISSÃO</text:span></text:p>
+      <text:p text:style-name="P5">DADOS D<text:span text:style-name="T16">O </text:span><text:span text:style-name="T20">CRITÉRIO DE ADMISSÃO</text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
@@ -6848,86 +6890,87 @@
     <table:table-column table:style-name="Tabela3.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P6">Nome:</text:p>
+      <text:p text:style-name="P7">Nome:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P12"><text:bookmark-start text:name="__DdeLink__12672_3363139225"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.name&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__12672_3363139225"/></text:p>
+      <text:p text:style-name="P14"><text:bookmark-start text:name="__DdeLink__12672_3363139225"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.name&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__12672_3363139225"/></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P13"><text:span text:style-name="T5">Nível </text:span><text:span text:style-name="T9">acadêmico</text:span><text:span text:style-name="T5">:</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P15"><text:span text:style-name="T4">Nível </text:span><text:span text:style-name="T13">acadêmico</text:span><text:span text:style-name="T4">:</text:span></text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P13"><text:placeholder text:placeholder-type="text" text:description="Nível Académico">&lt;appcriteria.academic_level.name&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P13"><text:span text:style-name="T8">Ano </text:span><text:span text:style-name="T9">l</text:span><text:span text:style-name="T8">ectivo</text:span><text:span text:style-name="T5">:</text:span> </text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P13"><text:placeholder text:placeholder-type="text" text:description="Área">&lt;appcriteria.lective_year.name&gt;</text:placeholder></text:p>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P15"><text:placeholder text:placeholder-type="text" text:description="Nível Académico">&lt;appcriteria.academic_level.name&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P5">Área:</text:p>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P15"><text:span text:style-name="T12">Ano </text:span><text:span text:style-name="T13">l</text:span><text:span text:style-name="T12">ectivo</text:span><text:span text:style-name="T4">:</text:span> </text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P13"><text:placeholder text:placeholder-type="text" text:description="Área">&lt;appcriteria.area.name&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P5">Curso:</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P13"><text:bookmark-start text:name="__DdeLink__9055_1237831906"/><text:placeholder text:placeholder-type="text" text:description="Curso">&lt;appcriteria.course.name&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__9055_1237831906"/></text:p>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P15"><text:placeholder text:placeholder-type="text" text:description="Área">&lt;appcriteria.lective_year.name&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P7">Fase:</text:p>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P6">Área:</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P13"><text:placeholder text:placeholder-type="text" text:description="Fase">&lt;appcriteria.phase.name&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P12"><text:span text:style-name="T8">Total de </text:span><text:span text:style-name="T9">v</text:span><text:span text:style-name="T8">agas</text:span><text:span text:style-name="T6">:</text:span><text:span text:style-name="T4"> </text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P12"><text:bookmark-start text:name="__DdeLink__1349_384698592531111"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.student_limit&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_384698592531111"/><text:s/><text:span text:style-name="T17">vagas</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P15"><text:placeholder text:placeholder-type="text" text:description="Área">&lt;appcriteria.area.name&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P12"><text:span text:style-name="T8">Idade </text:span><text:span text:style-name="T9">máxima para admissão</text:span><text:span text:style-name="T6">:</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P6">Curso:</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P12"><text:bookmark-start text:name="__DdeLink__1349_3846985925311121"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.age&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_3846985925311121"/><text:s/><text:span text:style-name="T17">anos</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P15"><text:bookmark-start text:name="__DdeLink__9055_1237831906"/><text:placeholder text:placeholder-type="text" text:description="Curso">&lt;appcriteria.course.name&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__9055_1237831906"/></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabela3.A1" office:value-type="string">
-      <text:p text:style-name="P12"><text:span text:style-name="T8">Média </text:span><text:span text:style-name="T9">mínima para admissão</text:span><text:span text:style-name="T6">:</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P8">Fase:</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabela3.B1" office:value-type="string">
-      <text:p text:style-name="P12"><text:bookmark-start text:name="__DdeLink__1349_3846985925311131"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.average&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_3846985925311131"/><text:s/><text:span text:style-name="T17">valores</text:span></text:p>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P15"><text:placeholder text:placeholder-type="text" text:description="Fase">&lt;appcriteria.phase.name&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P14"><text:span text:style-name="T12">Total de </text:span><text:span text:style-name="T13">v</text:span><text:span text:style-name="T12">agas</text:span><text:span text:style-name="T10">:</text:span><text:span text:style-name="T8"> </text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P14"><text:bookmark-start text:name="__DdeLink__1349_384698592531111"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.student_limit&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_384698592531111"/><text:s/><text:span text:style-name="T21">vagas</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P14"><text:span text:style-name="T12">Idade </text:span><text:span text:style-name="T13">máxima para admissão</text:span><text:span text:style-name="T10">:</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P14"><text:bookmark-start text:name="__DdeLink__1349_3846985925311121"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.age&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_3846985925311121"/><text:s/><text:span text:style-name="T21">anos</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabela3.A2" office:value-type="string">
+      <text:p text:style-name="P14"><text:span text:style-name="T12">Média </text:span><text:span text:style-name="T13">mínima para admissão</text:span><text:span text:style-name="T10">:</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabela3.B2" office:value-type="string">
+      <text:p text:style-name="P14"><text:bookmark-start text:name="__DdeLink__1349_3846985925311131"/><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.average&gt;</text:placeholder><text:bookmark-end text:name="__DdeLink__1349_3846985925311131"/><text:s/><text:span text:style-name="T21">valores</text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P8"><text:bookmark text:name="__DdeLink__1790_3846985925"/></text:p>
-   <text:p text:style-name="P9"><text:bookmark-start text:name="__DdeLink__23915_40455917091"/><text:bookmark-start text:name="__DdeLink__4734_404559170911"/><text:span text:style-name="T13"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;appcriteria.description&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T14">Descrição</text:span><text:span text:style-name="T15">: </text:span><text:bookmark-start text:name="__DdeLink__1349_3846985925321"/><text:span text:style-name="T18"><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.description&gt;</text:placeholder></text:span><text:bookmark-end text:name="__DdeLink__23915_40455917091"/><text:bookmark-end text:name="__DdeLink__4734_404559170911"/><text:bookmark-end text:name="__DdeLink__1349_3846985925321"/><text:bookmark-start text:name="__DdeLink__14613_2185824751"/><text:span text:style-name="T13"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:span><text:bookmark-end text:name="__DdeLink__14613_2185824751"/></text:p>
-   <text:p text:style-name="P10"/>
-   <text:p text:style-name="P20"/>
-   <text:p text:style-name="P21"><text:span text:style-name="T1">O</text:span><text:span text:style-name="T2">(a)</text:span><text:span text:style-name="T1"> </text:span><text:span text:style-name="T3">Subdiretor</text:span><text:span text:style-name="T2">(a)</text:span><text:span text:style-name="T1"> Pedagógico</text:span><text:span text:style-name="T2">(a)</text:span></text:p>
-   <text:p text:style-name="P3"><text:tab/></text:p>
-   <text:p text:style-name="P11"/>
-   <text:p text:style-name="P14"><text:span text:style-name="T10">Documento </text:span><text:bookmark-start text:name="__DdeLink__1831_38469859251"/><text:span text:style-name="T10">g</text:span><text:bookmark-end text:name="__DdeLink__1831_38469859251"/><text:span text:style-name="T7">erado </text:span><text:span text:style-name="T11">a</text:span><text:span text:style-name="T5">:</text:span> <text:placeholder text:placeholder-type="text" text:description="Descrição">&lt;create_date&gt;</text:placeholder><text:s/><text:placeholder text:placeholder-type="text">&lt;datetime.datetime.now().strftime(&apos;%H:%M:%S&apos;)&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P15"><text:bookmark text:name="__DdeLink__6741_4045591709"/><text:bookmark text:name="__DdeLink__25040_4045591709"/><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P9"><text:bookmark text:name="__DdeLink__1790_3846985925"/></text:p>
+   <text:p text:style-name="P27"><text:bookmark-start text:name="__DdeLink__23915_40455917091"/><text:bookmark-start text:name="__DdeLink__4734_404559170911"/><text:placeholder text:placeholder-type="text">&lt;if test=&quot;appcriteria.description&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P11"><text:span text:style-name="T18">Descrição</text:span><text:span text:style-name="T19">: </text:span><text:bookmark-start text:name="__DdeLink__1349_3846985925321"/><text:span text:style-name="T22"><text:placeholder text:placeholder-type="text" text:description="Nome">&lt;appcriteria.description&gt;</text:placeholder></text:span><text:bookmark-end text:name="__DdeLink__1349_3846985925321"/><text:bookmark-end text:name="__DdeLink__23915_40455917091"/><text:bookmark-end text:name="__DdeLink__4734_404559170911"/><text:bookmark-start text:name="__DdeLink__14613_2185824751"/><text:span text:style-name="T17"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:span><text:bookmark-end text:name="__DdeLink__14613_2185824751"/></text:p>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P22"/>
+   <text:p text:style-name="P23"><text:span text:style-name="T5">O</text:span><text:span text:style-name="T6">(a)</text:span><text:span text:style-name="T5"> </text:span><text:span text:style-name="T7">Subdiretor</text:span><text:span text:style-name="T6">(a)</text:span><text:span text:style-name="T5"> Pedagógico</text:span><text:span text:style-name="T6">(a)</text:span></text:p>
+   <text:p text:style-name="P4"><text:tab/></text:p>
+   <text:p text:style-name="P13"/>
+   <text:p text:style-name="P16"/>
+   <text:p text:style-name="P17"><text:bookmark text:name="__DdeLink__6741_4045591709"/><text:bookmark text:name="__DdeLink__25040_4045591709"/><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
   </office:text>
  </office:body>
 </office:document>

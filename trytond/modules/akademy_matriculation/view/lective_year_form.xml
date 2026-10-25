@@ -4,10 +4,9 @@ this repository contains the full copyright notices and license terms. -->
 
 <data>
 	<xpath expr="/form/notebook/page[@id='quarter']" position="after">  
-        <page string="Fases" id="phase">
+        <page string="Phases" id="phase">
             <field name="phase" mode="tree,from" colspan="4"
                 view_ids="akademy_matriculation.phase_view_tree,akademy_matriculation.phase_view_form"/>
         </page>
     </xpath>
 </data>
-

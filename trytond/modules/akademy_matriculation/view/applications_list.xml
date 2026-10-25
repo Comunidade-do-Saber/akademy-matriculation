@@ -11,7 +11,7 @@ this repository contains the full copyright notices and license terms. -->
   <field name="phase"/>
   <field name="course_classe"/>
   <field name="age">
-    <suffix name="age" string="Anos"/>
+    <suffix name="age" string="Year(s)"/>
   </field>
   <field name="create_date" widget="date"/>  
 </tree>
